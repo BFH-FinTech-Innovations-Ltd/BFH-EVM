@@ -10,15 +10,15 @@ import (
 
 	"cosmossdk.io/math"
 
+	testtx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	testtx "github.com/evmos/evmos/v20/testutil/tx"
-	evmostypes "github.com/evmos/evmos/v20/types"
-	"github.com/evmos/evmos/v20/utils"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // defaultChain represents the default chain ID used in the suite setup.

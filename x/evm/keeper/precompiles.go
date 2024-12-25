@@ -4,10 +4,10 @@
 package keeper
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
-	"github.com/evmos/evmos/v20/x/evm/types"
 )
 
 type Precompiles struct {

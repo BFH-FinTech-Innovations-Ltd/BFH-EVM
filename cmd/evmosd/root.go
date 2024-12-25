@@ -25,6 +25,7 @@ import (
 	snapshottypes "cosmossdk.io/store/snapshots/types"
 	storetypes "cosmossdk.io/store/types"
 	confixcmd "cosmossdk.io/tools/confix/cmd"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/client"
 	clientcfg "github.com/cosmos/cosmos-sdk/client/config"
@@ -45,19 +46,18 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/crisis"
 	genutilcli "github.com/cosmos/cosmos-sdk/x/genutil/client/cli"
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
-	evmostypes "github.com/evmos/evmos/v20/types"
 
 	rosettaCmd "github.com/cosmos/rosetta/cmd"
 
-	evmosclient "github.com/evmos/evmos/v20/client"
-	"github.com/evmos/evmos/v20/client/block"
-	"github.com/evmos/evmos/v20/client/debug"
-	evmosserver "github.com/evmos/evmos/v20/server"
-	servercfg "github.com/evmos/evmos/v20/server/config"
-	srvflags "github.com/evmos/evmos/v20/server/flags"
+	evmosclient "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/client"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/client/block"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/client/debug"
+	evmosserver "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server"
+	servercfg "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server/config"
+	srvflags "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server/flags"
 
-	"github.com/evmos/evmos/v20/app"
-	evmoskr "github.com/evmos/evmos/v20/crypto/keyring"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
+	evmoskr "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/keyring"
 )
 
 const EnvPrefix = "EVMOS"
@@ -66,13 +66,13 @@ type emptyAppOptions struct{}
 
 func (ao emptyAppOptions) Get(_ string) interface{} { return nil }
 
-// NewRootCmd creates a new root command for evmosd. It is called once in the
+// NewRootCmd creates a new root command for bfhd. It is called once in the
 // main function.
 func NewRootCmd() (*cobra.Command, sdktestutil.TestEncodingConfig) {
 	// we "pre"-instantiate the application for getting the injected/configured encoding configuration
 	// and the CLI options for the modules
 	// add keyring to autocli opts
-	tempApp := app.NewEvmos(
+	tempApp := app.NewBfhApp(
 		log.NewNopLogger(),
 		dbm.NewMemDB(),
 		nil, true, nil,
@@ -356,7 +356,7 @@ func (a appCreator) newApp(logger log.Logger, db dbm.DB, traceStore io.Writer, a
 		chainID = conf.ChainID
 	}
 
-	evmosApp := app.NewEvmos(
+	evmosApp := app.NewBfhApp(
 		logger, db, traceStore, true, skipUpgradeHeights,
 		cast.ToString(appOpts.Get(flags.FlagHome)),
 		cast.ToUint(appOpts.Get(sdkserver.FlagInvCheckPeriod)),
@@ -391,20 +391,20 @@ func (a appCreator) appExport(
 	appOpts servertypes.AppOptions,
 	modulesToExport []string,
 ) (servertypes.ExportedApp, error) {
-	var evmosApp *app.Evmos
+	var evmosApp *app.BfhApp
 	homePath, ok := appOpts.Get(flags.FlagHome).(string)
 	if !ok || homePath == "" {
 		return servertypes.ExportedApp{}, errors.New("application home not set")
 	}
 
 	if height != -1 {
-		evmosApp = app.NewEvmos(logger, db, traceStore, false, map[int64]bool{}, "", uint(1), appOpts, app.EvmosAppOptions)
+		evmosApp = app.NewBfhApp(logger, db, traceStore, false, map[int64]bool{}, "", uint(1), appOpts, app.EvmosAppOptions)
 
 		if err := evmosApp.LoadHeight(height); err != nil {
 			return servertypes.ExportedApp{}, err
 		}
 	} else {
-		evmosApp = app.NewEvmos(logger, db, traceStore, true, map[int64]bool{}, "", uint(1), appOpts, app.EvmosAppOptions)
+		evmosApp = app.NewBfhApp(logger, db, traceStore, true, map[int64]bool{}, "", uint(1), appOpts, app.EvmosAppOptions)
 	}
 
 	return evmosApp.ExportAppStateAndValidators(forZeroHeight, jailAllowedAddrs, modulesToExport)
@@ -424,7 +424,7 @@ func initTendermintConfig() *cmtcfg.Config {
 }
 
 func tempDir(defaultHome string) string {
-	dir, err := os.MkdirTemp("", "evmos")
+	dir, err := os.MkdirTemp("", "bfh")
 	if err != nil {
 		dir = defaultHome
 	}

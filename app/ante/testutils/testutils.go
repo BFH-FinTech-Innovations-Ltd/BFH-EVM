@@ -12,16 +12,16 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	consensustypes "github.com/cosmos/cosmos-sdk/x/consensus/types"
 
-	"github.com/evmos/evmos/v20/app"
-	ante "github.com/evmos/evmos/v20/app/ante"
-	evmante "github.com/evmos/evmos/v20/app/ante/evm"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/factory"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/grpc"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	"github.com/evmos/evmos/v20/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
+	ante "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante"
+	evmante "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/evm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/factory"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/grpc"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 )
 
 type AnteTestSuite struct {

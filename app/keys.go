@@ -8,6 +8,12 @@ import (
 	evidencetypes "cosmossdk.io/x/evidence/types"
 	"cosmossdk.io/x/feegrant"
 	upgradetypes "cosmossdk.io/x/upgrade/types"
+	epochstypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/epochs/types"
+	erc20types "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
+	inflationtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/types"
+	vestingtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	authzkeeper "github.com/cosmos/cosmos-sdk/x/authz/keeper"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
@@ -22,12 +28,6 @@ import (
 	icahosttypes "github.com/cosmos/ibc-go/v8/modules/apps/27-interchain-accounts/host/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	ibcexported "github.com/cosmos/ibc-go/v8/modules/core/exported"
-	epochstypes "github.com/evmos/evmos/v20/x/epochs/types"
-	erc20types "github.com/evmos/evmos/v20/x/erc20/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
-	inflationtypes "github.com/evmos/evmos/v20/x/inflation/v1/types"
-	vestingtypes "github.com/evmos/evmos/v20/x/vesting/types"
 )
 
 // StoreKeys returns the application store keys,

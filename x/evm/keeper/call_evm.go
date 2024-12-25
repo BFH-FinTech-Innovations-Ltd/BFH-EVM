@@ -7,14 +7,14 @@ import (
 	"math/big"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server/config"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/evmos/evmos/v20/server/config"
-	"github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // CallEVM performs a smart contract method call using given args.

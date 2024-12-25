@@ -12,7 +12,7 @@ from .ibc_utils import (
 from .utils import get_scaling_factor, parse_events_rpc, wait_for_fn
 
 
-@pytest.fixture(scope="module", params=["evmos", "evmos-6dec", "evmos-rocksdb"])
+@pytest.fixture(scope="module", params=["evmos", "evmos-6dec", "evmos-rocksdb", "bfh"])
 def ibc(request, tmp_path_factory):
     """
     prepare IBC network with an evmos chain
@@ -68,15 +68,15 @@ def test_ibc_transfer_with_hermes(ibc):
 
 def test_evmos_ibc_transfer(ibc):
     """
-    test sending aevmos from evmos to crypto-org-chain using cli.
+    test sending ubfh from evmos to crypto-org-chain using cli.
     """
     assert_ready(ibc)
     dst_addr = ibc.chains["chainmain"].cosmos_cli().address("signer2")
     amt = 1000000
 
-    cli = ibc.chains["evmos"].cosmos_cli()
+    cli = ibc.chains["bfh"].cosmos_cli()
     src_addr = cli.address("signer2")
-    src_denom = "aevmos"
+    src_denom = "ubfh"
 
     # case 1: use evmos cli
     old_src_balance = get_balance(ibc.chains["evmos"], src_addr, src_denom)
@@ -109,16 +109,16 @@ def test_evmos_ibc_transfer(ibc):
 
 def test_evmos_ibc_transfer_acknowledgement_error(ibc):
     """
-    test sending aevmos from evmos to crypto-org-chain using cli
+    test sending ubfh from evmos to crypto-org-chain using cli
     transfer_tokens with invalid receiver for acknowledgement error.
     """
     assert_ready(ibc)
     dst_addr = "invalid_address"
     amt = 1000000
 
-    cli = ibc.chains["evmos"].cosmos_cli()
+    cli = ibc.chains["bfh"].cosmos_cli()
     src_addr = cli.address("signer2")
-    src_denom = "aevmos"
+    src_denom = "ubfh"
 
     old_src_balance = get_balance(ibc.chains["evmos"], src_addr, src_denom)
     rsp = cli.ibc_transfer(
@@ -135,8 +135,8 @@ def test_evmos_ibc_transfer_acknowledgement_error(ibc):
 
     def check_balance_change():
         nonlocal new_src_balance
-        new_src_balance = get_balance(ibc.chains["evmos"], src_addr, src_denom)
+        new_src_balance = get_balance(ibc.chains["bfh"], src_addr, src_denom)
         return old_src_balance == new_src_balance
 
     wait_for_fn("balance no change", check_balance_change)
-    new_src_balance = get_balance(ibc.chains["evmos"], src_addr, src_denom)
+    new_src_balance = get_balance(ibc.chains["bfh"], src_addr, src_denom)

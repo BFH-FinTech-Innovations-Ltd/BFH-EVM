@@ -12,10 +12,10 @@ import (
 	//nolint:stylecheck,revive // it's common practice to use the global imports for Ginkgo and Gomega
 	. "github.com/onsi/gomega"
 
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // CheckAuthorizationEvents is a helper function used in the integration tests and checks if the approval event is emitted.

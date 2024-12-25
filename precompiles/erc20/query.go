@@ -11,16 +11,16 @@ import (
 	"strings"
 	"time"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/ibc"
+	auth "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	authzkeeper "github.com/cosmos/cosmos-sdk/x/authz/keeper"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/evmos/evmos/v20/ibc"
-	auth "github.com/evmos/evmos/v20/precompiles/authorization"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 const (

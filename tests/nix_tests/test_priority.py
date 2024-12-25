@@ -170,28 +170,28 @@ def test_native_tx_priority(evmos_cluster):
         {
             "from": eth_to_bech32(ADDRS["community"]),
             "to": eth_to_bech32(ADDRS["validator"]),
-            "amount": "1000aevmos",
+            "amount": "1000ubfh",
             "gas_prices": f"{base_fee + PRIORITY_REDUCTION * 600000}{fee_denom}",
             "max_priority_price": 0,
         },
         {
             "from": eth_to_bech32(ADDRS["signer1"]),
             "to": eth_to_bech32(ADDRS["signer2"]),
-            "amount": "1000aevmos",
+            "amount": "1000ubfh",
             "gas_prices": f"{base_fee + PRIORITY_REDUCTION * 600000}{fee_denom}",
             "max_priority_price": PRIORITY_REDUCTION * 200000,
         },
         {
             "from": eth_to_bech32(ADDRS["signer2"]),
             "to": eth_to_bech32(ADDRS["signer1"]),
-            "amount": "1000aevmos",
+            "amount": "1000ubfh",
             "gas_prices": f"{base_fee + PRIORITY_REDUCTION * 400000}{fee_denom}",
             "max_priority_price": PRIORITY_REDUCTION * 400000,
         },
         {
             "from": eth_to_bech32(ADDRS["validator"]),
             "to": eth_to_bech32(ADDRS["community"]),
-            "amount": "1000aevmos",
+            "amount": "1000ubfh",
             "gas_prices": f"{base_fee + PRIORITY_REDUCTION * 600000}{fee_denom}",
             "max_priority_price": None,  # no extension, maximum tipFeeCap
         },

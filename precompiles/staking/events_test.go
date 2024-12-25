@@ -3,19 +3,19 @@ package staking_test
 import (
 	"math/big"
 
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
 
 	"cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/staking"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/statedb"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/evmos/v20/precompiles/authorization"
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
-	"github.com/evmos/evmos/v20/precompiles/staking"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
-	"github.com/evmos/evmos/v20/x/evm/statedb"
 )
 
 func (s *PrecompileTestSuite) TestApprovalEvent() {

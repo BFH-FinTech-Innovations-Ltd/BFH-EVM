@@ -7,15 +7,15 @@ import (
 	"time"
 
 	"cosmossdk.io/math"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/evm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/grpc"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	vestingtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
-	"github.com/evmos/evmos/v20/app/ante/evm"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/grpc"
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	vestingtypes "github.com/evmos/evmos/v20/x/vesting/types"
 )
 
 type AccountExpenses = map[string]*evm.EthVestingExpenseTracker

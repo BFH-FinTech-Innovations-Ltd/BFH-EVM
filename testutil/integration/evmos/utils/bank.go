@@ -8,11 +8,11 @@ import (
 	"fmt"
 
 	"cosmossdk.io/math"
+	cmnfactory "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/common/factory"
+	cmnnet "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/common/network"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	cmnfactory "github.com/evmos/evmos/v20/testutil/integration/common/factory"
-	cmnnet "github.com/evmos/evmos/v20/testutil/integration/common/network"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
 )
 
 // FundAccountWithBaseDenom funds the given account with the given amount of the network's

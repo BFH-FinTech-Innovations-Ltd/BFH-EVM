@@ -5,20 +5,20 @@ import (
 	"math/big"
 	"time"
 
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
 
 	"cosmossdk.io/math"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/staking"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/testutil"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/statedb"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkauthz "github.com/cosmos/cosmos-sdk/x/authz"
 	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/evmos/evmos/v20/precompiles/authorization"
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
-	"github.com/evmos/evmos/v20/precompiles/staking"
-	"github.com/evmos/evmos/v20/precompiles/testutil"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
-	"github.com/evmos/evmos/v20/x/evm/statedb"
 )
 
 func (s *PrecompileTestSuite) TestApprove() {

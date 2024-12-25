@@ -3,10 +3,10 @@ package keeper_test
 import (
 	"github.com/stretchr/testify/suite"
 
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/factory"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/grpc"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/factory"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/grpc"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
 )
 
 type KeeperTestSuite struct {

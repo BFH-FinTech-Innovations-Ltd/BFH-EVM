@@ -18,15 +18,15 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/evmos/evmos/v20/crypto/hd"
-	"github.com/evmos/evmos/v20/encoding"
-	"github.com/evmos/evmos/v20/indexer"
-	"github.com/evmos/evmos/v20/rpc/backend/mocks"
-	rpctypes "github.com/evmos/evmos/v20/rpc/types"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	utiltx "github.com/evmos/evmos/v20/testutil/tx"
-	"github.com/evmos/evmos/v20/utils"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/hd"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/encoding"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/indexer"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/backend/mocks"
+	rpctypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	utiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 )
 
 type BackendTestSuite struct {

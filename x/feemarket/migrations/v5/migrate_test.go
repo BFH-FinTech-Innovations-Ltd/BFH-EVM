@@ -5,11 +5,11 @@ import (
 
 	"cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/encoding"
+	v5 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/migrations/v5"
+	typesV4 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/migrations/v5/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 	"github.com/cosmos/cosmos-sdk/testutil"
-	"github.com/evmos/evmos/v20/encoding"
-	v5 "github.com/evmos/evmos/v20/x/feemarket/migrations/v5"
-	typesV4 "github.com/evmos/evmos/v20/x/feemarket/migrations/v5/types"
-	"github.com/evmos/evmos/v20/x/feemarket/types"
 
 	"github.com/stretchr/testify/require"
 )

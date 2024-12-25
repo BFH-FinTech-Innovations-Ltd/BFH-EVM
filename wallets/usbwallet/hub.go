@@ -13,8 +13,8 @@ import (
 	// #nosec
 	"runtime"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/accounts"
 	gethaccounts "github.com/ethereum/go-ethereum/accounts"
-	"github.com/evmos/evmos/v20/wallets/accounts"
 	usb "github.com/zondax/hid"
 )
 

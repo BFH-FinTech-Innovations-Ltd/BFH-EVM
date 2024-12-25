@@ -8,17 +8,17 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante"
+	ethante "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/evm"
+	cmmnfactory "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/common/factory"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/factory"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/grpc"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/evmos/evmos/v20/app/ante"
-	ethante "github.com/evmos/evmos/v20/app/ante/evm"
-	cmmnfactory "github.com/evmos/evmos/v20/testutil/integration/common/factory"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/factory"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/grpc"
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	evmostypes "github.com/evmos/evmos/v20/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 type benchmarkSuite struct {

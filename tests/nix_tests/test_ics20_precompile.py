@@ -178,7 +178,7 @@ def test_denom_hash(ibc, name, args, exp_res):
             "empty input args",
             [
                 ADDRS["community"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [],
             "improper number of arguments",
@@ -188,7 +188,7 @@ def test_denom_hash(ibc, name, args, exp_res):
             "authorization does not exist - returns empty array",
             [
                 ADDRS["community"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["community"],
@@ -201,14 +201,14 @@ def test_denom_hash(ibc, name, args, exp_res):
             "existing authorization with one denom",
             [
                 ADDRS["community"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["community"],
                 ADDRS["validator"],
             ],
             None,
-            [("transfer", "channel-0", [("aevmos", 1000000000000000000)], [], [])],
+            [("transfer", "channel-0", [("ubfh", 1000000000000000000)], [], [])],
         ),
         (
             "existing authorization with a multiple coin denomination",
@@ -218,7 +218,7 @@ def test_denom_hash(ibc, name, args, exp_res):
                     [
                         "transfer",
                         "channel-0",
-                        [["aevmos", int(1e18)], ["uatom", int(1e18)]],
+                        [["ubfh", int(1e18)], ["uatom", int(1e18)]],
                         [],
                         [],
                     ]
@@ -233,7 +233,7 @@ def test_denom_hash(ibc, name, args, exp_res):
                 (
                     "transfer",
                     "channel-0",
-                    [("aevmos", 1000000000000000000), ("uatom", 1000000000000000000)],
+                    [("ubfh", 1000000000000000000), ("uatom", 1000000000000000000)],
                     [],
                     [],
                 )
@@ -278,7 +278,7 @@ def test_query_allowance(ibc, name, auth_args, args, err_contains, exp_res):
             "channel does not exist",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-1", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-1", [["ubfh", int(1e18)]], [], []]],
             ],
             True,
             "channel not found",
@@ -288,7 +288,7 @@ def test_query_allowance(ibc, name, auth_args, args, err_contains, exp_res):
             "MaxInt256 allocation",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", MAX_UINT256]], [], []]],
+                [["transfer", "channel-0", [["ubfh", MAX_UINT256]], [], []]],
             ],
             False,
             "",
@@ -298,7 +298,7 @@ def test_query_allowance(ibc, name, auth_args, args, err_contains, exp_res):
             "create authorization with specific spend limit",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             False,
             "",
@@ -343,7 +343,7 @@ def test_approve(ibc, name, args, exp_err, err_contains, exp_spend_limit):
     assert auth_event.args.allocations[0] == (
         "transfer",
         "channel-0",
-        [("aevmos", exp_spend_limit)],
+        [("ubfh", exp_spend_limit)],
         [],
         [],
     )
@@ -403,7 +403,7 @@ def test_revoke(ibc, name, args, exp_err, err_contains):
     # signer1 creates authorization for validator address
     approve_tx = pc.functions.approve(
         ADDRS["validator"],
-        [["transfer", "channel-0", [["aevmos", MAX_UINT256]], [], []]],
+        [["transfer", "channel-0", [["ubfh", MAX_UINT256]], [], []]],
     ).build_transaction(
         {
             "from": ADDRS["signer1"],
@@ -463,7 +463,7 @@ def test_revoke(ibc, name, args, exp_err, err_contains):
             "empty input args",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [],
             True,
@@ -474,13 +474,13 @@ def test_revoke(ibc, name, args, exp_err, err_contains):
             "authorization does not exist",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["signer1"],
                 "transfer",
                 "channel-1",
-                "aevmos",
+                "ubfh",
                 int(1e18),
             ],
             True,
@@ -491,7 +491,7 @@ def test_revoke(ibc, name, args, exp_err, err_contains):
             "allocation for specified denom does not exist",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["signer2"],
@@ -508,13 +508,13 @@ def test_revoke(ibc, name, args, exp_err, err_contains):
             "the new spend limit overflows the maxUint256",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["signer2"],
                 "transfer",
                 "channel-0",
-                "aevmos",
+                "ubfh",
                 MAX_UINT256 - 1,
             ],
             True,
@@ -525,18 +525,18 @@ def test_revoke(ibc, name, args, exp_err, err_contains):
             "increase allowance by 1 EVMOS",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["signer2"],
                 "transfer",
                 "channel-0",
-                "aevmos",
+                "ubfh",
                 int(1e18),
             ],
             False,
             "",
-            json.loads("""[{"denom": "aevmos", "amount": "2000000000000000000"}]"""),
+            json.loads("""[{"denom": "ubfh", "amount": "2000000000000000000"}]"""),
         ),
         (
             "increase allowance by 1 Atom for allocation with a multiple coin denomination",
@@ -546,7 +546,7 @@ def test_revoke(ibc, name, args, exp_err, err_contains):
                     [
                         "transfer",
                         "channel-0",
-                        [["aevmos", int(1e18)], ["uatom", int(1e18)]],
+                        [["ubfh", int(1e18)], ["uatom", int(1e18)]],
                         [],
                         [],
                     ]
@@ -562,7 +562,7 @@ def test_revoke(ibc, name, args, exp_err, err_contains):
             False,
             "",
             json.loads(
-                """[{"denom": "aevmos", "amount": "1000000000000000000"},"""
+                """[{"denom": "ubfh", "amount": "1000000000000000000"},"""
                 """{"denom": "uatom", "amount": "2000000000000000000"}]"""
             ),
         ),
@@ -647,7 +647,7 @@ def test_increase_allowance(
             "empty input args",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [],
             True,
@@ -658,13 +658,13 @@ def test_increase_allowance(
             "authorization does not exist",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["signer1"],
                 "transfer",
                 "channel-1",
-                "aevmos",
+                "ubfh",
                 int(1e18),
             ],
             True,
@@ -675,7 +675,7 @@ def test_increase_allowance(
             "allocation for specified denom does not exist",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["signer2"],
@@ -692,13 +692,13 @@ def test_increase_allowance(
             "the new spend limit is negative",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["signer2"],
                 "transfer",
                 "channel-0",
-                "aevmos",
+                "ubfh",
                 int(2e18),
             ],
             True,
@@ -709,18 +709,18 @@ def test_increase_allowance(
             "decrease allowance by 0.5 EVMOS",
             [
                 ADDRS["signer2"],
-                [["transfer", "channel-0", [["aevmos", int(1e18)]], [], []]],
+                [["transfer", "channel-0", [["ubfh", int(1e18)]], [], []]],
             ],
             [
                 ADDRS["signer2"],
                 "transfer",
                 "channel-0",
-                "aevmos",
+                "ubfh",
                 int(5e17),
             ],
             False,
             "",
-            json.loads("""[{"denom": "aevmos", "amount": "500000000000000000"}]"""),
+            json.loads("""[{"denom": "ubfh", "amount": "500000000000000000"}]"""),
         ),
         (
             "decrease allowance by 0.5 Atom for allocation with a multiple coin denomination",
@@ -730,7 +730,7 @@ def test_increase_allowance(
                     [
                         "transfer",
                         "channel-0",
-                        [["aevmos", int(1e18)], ["uatom", int(1e18)]],
+                        [["ubfh", int(1e18)], ["uatom", int(1e18)]],
                         [],
                         [],
                     ]
@@ -746,7 +746,7 @@ def test_increase_allowance(
             False,
             "",
             json.loads(
-                """[{"denom": "aevmos", "amount": "1000000000000000000"},"""
+                """[{"denom": "ubfh", "amount": "1000000000000000000"},"""
                 """{"denom": "uatom", "amount": "500000000000000000"}]"""
             ),
         ),
@@ -834,7 +834,7 @@ def test_decrease_allowance(
             [
                 "transfer",
                 "channel-1",
-                "aevmos",
+                "ubfh",
                 int(1e18),
                 "cro1apdh4yc2lnpephevc6lmpvkyv6s5cjh652n6e4",  # signer2 in chain-main
             ],
@@ -845,7 +845,7 @@ def test_decrease_allowance(
         ),
         (
             "non authorized denom",
-            [["aevmos", int(1e18)]],
+            [["ubfh", int(1e18)]],
             [
                 "transfer",
                 "channel-0",
@@ -860,11 +860,11 @@ def test_decrease_allowance(
         ),
         (
             "allowance is less than transfer amount",
-            [["aevmos", int(1e18)]],
+            [["ubfh", int(1e18)]],
             [
                 "transfer",
                 "channel-0",
-                "aevmos",
+                "ubfh",
                 int(2e18),
                 "cro1apdh4yc2lnpephevc6lmpvkyv6s5cjh652n6e4",
             ],
@@ -875,11 +875,11 @@ def test_decrease_allowance(
         ),
         (
             "transfer 1 Evmos from chainA to chainB and spend the entire allowance",
-            [["aevmos", int(1e18)]],
+            [["ubfh", int(1e18)]],
             [
                 "transfer",
                 "channel-0",
-                "aevmos",
+                "ubfh",
                 int(1e18),
                 "cro1apdh4yc2lnpephevc6lmpvkyv6s5cjh652n6e4",
             ],
@@ -890,26 +890,26 @@ def test_decrease_allowance(
         ),
         (
             "transfer 1 Evmos from chainA to chainB and don't change the unlimited spending limit",
-            [["aevmos", MAX_UINT256]],
+            [["ubfh", MAX_UINT256]],
             [
                 "transfer",
                 "channel-0",
-                "aevmos",
+                "ubfh",
                 int(1e18),
                 "cro1apdh4yc2lnpephevc6lmpvkyv6s5cjh652n6e4",
             ],
             False,
             None,
             int(1e18),
-            json.loads(f"""[{{"denom": "aevmos", "amount": "{MAX_UINT256}"}}]"""),
+            json.loads(f"""[{{"denom": "ubfh", "amount": "{MAX_UINT256}"}}]"""),
         ),
         (
             "transfer 1 Evmos from chainA to chainB and only change 1 spend limit",
-            [["aevmos", int(1e18)], ["uatom", int(1e18)]],
+            [["ubfh", int(1e18)], ["uatom", int(1e18)]],
             [
                 "transfer",
                 "channel-0",
-                "aevmos",
+                "ubfh",
                 int(1e18),
                 "cro1apdh4yc2lnpephevc6lmpvkyv6s5cjh652n6e4",
             ],
@@ -928,7 +928,7 @@ def test_ibc_transfer_with_authorization(
 
     pc = get_precompile_contract(ibc.chains["evmos"].w3, "ICS20I")
     gas_limit = 200_000
-    src_denom = "aevmos"
+    src_denom = "ubfh"
     evmos_gas_price = ibc.chains["evmos"].w3.eth.gas_price
     src_address = ibc.chains["evmos"].cosmos_cli().address("signer2")
     dst_address = ibc.chains["chainmain"].cosmos_cli().address("signer2")
@@ -1081,7 +1081,7 @@ def test_ibc_transfer_from_eoa_through_contract(ibc):
     w3 = evmos.w3
 
     amt = 1000000000000000000
-    src_denom = "aevmos"
+    src_denom = "ubfh"
     gas_limit = 200_000
     evmos_gas_price = ibc.chains["evmos"].w3.eth.gas_price
 
@@ -1230,13 +1230,13 @@ def test_ibc_transfer_from_eoa_with_internal_transfer(
 
     channel = "channel-0"
     amt = 1000000000000000000
-    src_denom = "aevmos"
+    src_denom = "ubfh"
     evm_denom = cli.evm_denom()
     gas_limit = 200_000
     evmos_gas_price = w3.eth.gas_price
 
     dst_addr = ibc.chains["chainmain"].cosmos_cli().address("signer2")
-    # address that will escrow the aevmos tokens when transferring via IBC
+    # address that will escrow the ubfh tokens when transferring via IBC
     escrow_bech32 = cli.escrow_address(channel)
 
     if other_addr is None:
@@ -1470,7 +1470,7 @@ def test_ibc_multi_transfer_from_eoa_with_internal_transfer(
     w3 = evmos.w3
     cli = evmos.cosmos_cli()
 
-    src_denom = "aevmos"
+    src_denom = "ubfh"
     evm_denom = cli.evm_denom()
     scaling_factor = get_scaling_factor(cli)
     gas_limit = 800_000
@@ -1485,7 +1485,7 @@ def test_ibc_multi_transfer_from_eoa_with_internal_transfer(
         evmos, ACCOUNTS["signer2"], ibc_transfer_amt, initial_contract_balance
     )
 
-    # send some funds (1e18 aevmos) to the contract to perform
+    # send some funds (1e18 ubfh) to the contract to perform
     # internal transfer within the tx
     src_bech32 = eth_to_bech32(src_addr)
     contract_bech32 = eth_to_bech32(eth_contract.address)
@@ -1646,7 +1646,7 @@ def test_multi_ibc_transfers_with_revert(ibc):
     evmos: Evmos = ibc.chains["evmos"]
     w3 = evmos.w3
 
-    src_denom = "aevmos"
+    src_denom = "ubfh"
     evm_denom = evmos.cosmos_cli().evm_denom()
     scaling_factor = get_scaling_factor(evmos.cosmos_cli())
     gas_limit = 800_000
@@ -1797,7 +1797,7 @@ def test_multi_ibc_transfers_with_nested_revert(ibc):
 
     evm_denom = evmos.cosmos_cli().evm_denom()
     scaling_factor = get_scaling_factor(evmos.cosmos_cli())
-    src_denom = "aevmos"
+    src_denom = "ubfh"
     gas_limit = 800_000
     ibc_transfer_amt = int(1e18)
     src_addr = ADDRS["signer2"]
@@ -1937,7 +1937,7 @@ def setup_interchain_sender_contract(
     """
     cli = evmos.cosmos_cli()
     evm_denom = cli.evm_denom()
-    tranfer_denom = "aevmos"
+    tranfer_denom = "ubfh"
     gas_limit = 200_000
     evmos_gas_price = evmos.w3.eth.gas_price
     # Deployment of contracts and initial checks
@@ -1970,7 +1970,7 @@ def setup_interchain_sender_contract(
 
     wait_for_fn("allowance has changed", check_allowance_set)
 
-    # send some funds (1e18 aevmos) to the contract to perform
+    # send some funds (1e18 ubfh) to the contract to perform
     # internal transfer within the tx
     src_bech32 = eth_to_bech32(src_acc.address)
     contract_bech32 = eth_to_bech32(eth_contract.address)

@@ -7,13 +7,13 @@ import (
 	"context"
 
 	upgradetypes "cosmossdk.io/x/upgrade/types"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	evmkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/keeper"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	"github.com/ethereum/go-ethereum/common"
-	evmostypes "github.com/evmos/evmos/v20/types"
-	evmkeeper "github.com/evmos/evmos/v20/x/evm/keeper"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // CreateUpgradeHandler creates an SDK upgrade handler for v20

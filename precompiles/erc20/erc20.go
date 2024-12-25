@@ -7,18 +7,18 @@ import (
 	"embed"
 	"fmt"
 
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 
 	storetypes "cosmossdk.io/store/types"
+	auth "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
+	erc20types "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
+	transferkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/ibc/transfer/keeper"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authzkeeper "github.com/cosmos/cosmos-sdk/x/authz/keeper"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	auth "github.com/evmos/evmos/v20/precompiles/authorization"
-	erc20types "github.com/evmos/evmos/v20/x/erc20/types"
-	transferkeeper "github.com/evmos/evmos/v20/x/ibc/transfer/keeper"
 )
 
 const (

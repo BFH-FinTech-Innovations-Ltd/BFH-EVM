@@ -12,8 +12,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	txTypes "github.com/cosmos/cosmos-sdk/types/tx"
 
+	evmos "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	apitypes "github.com/ethereum/go-ethereum/signer/core/apitypes"
-	evmos "github.com/evmos/evmos/v20/types"
 )
 
 type aminoMessage struct {

@@ -7,11 +7,11 @@ import (
 	"encoding/json"
 	"math/big"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/contracts"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/evmos/evmos/v20/contracts"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // GetERC20Balance returns the token balance of a given account address for

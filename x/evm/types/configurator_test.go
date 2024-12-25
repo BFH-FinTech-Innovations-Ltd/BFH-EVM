@@ -6,8 +6,8 @@ package types_test
 import (
 	"testing"
 
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
-	"github.com/evmos/evmos/v20/x/evm/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/stretchr/testify/require"
 )
 

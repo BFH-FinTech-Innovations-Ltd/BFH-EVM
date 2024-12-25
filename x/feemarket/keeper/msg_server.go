@@ -6,9 +6,9 @@ import (
 	"context"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/evmos/evmos/v20/x/feemarket/types"
 )
 
 // UpdateParams implements the gRPC MsgServer interface. When an UpdateParams

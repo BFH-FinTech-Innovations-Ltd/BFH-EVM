@@ -7,12 +7,12 @@ import (
 	"fmt"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/erc20"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/werc20"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/precompiles/erc20"
-	"github.com/evmos/evmos/v20/precompiles/werc20"
-	"github.com/evmos/evmos/v20/x/erc20/types"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 // GetERC20PrecompileInstance returns the precompile instance for the given address.

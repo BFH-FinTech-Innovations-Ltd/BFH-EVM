@@ -5,11 +5,11 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/encoding"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/tests/e2e/upgrade"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/evmos/v20/encoding"
-	"github.com/evmos/evmos/v20/tests/e2e/upgrade"
-	"github.com/evmos/evmos/v20/types"
 	"github.com/stretchr/testify/require"
 )
 

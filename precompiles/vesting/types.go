@@ -7,16 +7,16 @@ import (
 	"time"
 
 	"cosmossdk.io/math"
-	"github.com/evmos/evmos/v20/precompiles/authorization"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
 
 	"github.com/ethereum/go-ethereum/common"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
+	vestingtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting/types"
 	cosmosvestingtypes "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
-	vestingtypes "github.com/evmos/evmos/v20/x/vesting/types"
 )
 
 // LockupPeriods is a struct used to parse the LockupPeriods parameter

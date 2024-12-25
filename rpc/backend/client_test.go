@@ -8,6 +8,9 @@ import (
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/backend/mocks"
+	rpc "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cometbft/cometbft/libs/bytes"
 	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
@@ -17,9 +20,6 @@ import (
 	"github.com/cometbft/cometbft/version"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/rpc/backend/mocks"
-	rpc "github.com/evmos/evmos/v20/rpc/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 	mock "github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

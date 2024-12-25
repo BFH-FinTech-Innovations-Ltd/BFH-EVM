@@ -49,7 +49,7 @@ import sources.nixpkgs {
       };
       rocksdb = pkgs.callPackage ./rocksdb.nix {};
       # evmos with rocksdb build
-      evmosd-rocksdb = pkgs.callPackage ../default.nix { dbBackend = "rocksdb"; };
+      bfhd-rocksdb = pkgs.callPackage ../default.nix { dbBackend = "rocksdb"; };
       # other chains to use in IBC tests
       chain-maind = pkgs.callPackage sources.chain-main { rocksdb = null; };
       strided = pkgs.callPackage ./cosmos-chain.nix { 

@@ -6,14 +6,14 @@ import (
 	"math/big"
 
 	"cosmossdk.io/math"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/backend/mocks"
+	rpctypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/types"
+	utiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/evmos/evmos/v20/rpc/backend/mocks"
-	rpctypes "github.com/evmos/evmos/v20/rpc/types"
-	utiltx "github.com/evmos/evmos/v20/testutil/tx"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 	"google.golang.org/grpc/metadata"
 )
 

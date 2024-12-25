@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"cosmossdk.io/math"
+	evmosutils "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	evmosutils "github.com/evmos/evmos/v20/utils"
 )
 
 var (

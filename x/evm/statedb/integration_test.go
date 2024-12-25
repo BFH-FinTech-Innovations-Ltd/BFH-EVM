@@ -8,15 +8,15 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/contracts"
+	stakingprecompile "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/staking"
+	testcontracts "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/testutil/contracts"
+	testfactory "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/factory"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/grpc"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
+	testnetwork "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/contracts"
-	stakingprecompile "github.com/evmos/evmos/v20/precompiles/staking"
-	testcontracts "github.com/evmos/evmos/v20/precompiles/testutil/contracts"
-	testfactory "github.com/evmos/evmos/v20/testutil/integration/evmos/factory"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/grpc"
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
-	testnetwork "github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 
 	//nolint:revive // okay to use dot imports for Ginkgo
 	. "github.com/onsi/ginkgo/v2"

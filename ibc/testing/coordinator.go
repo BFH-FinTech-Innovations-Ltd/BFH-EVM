@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/client"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	simtestutil "github.com/cosmos/cosmos-sdk/testutil/sims"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	ibctesting "github.com/cosmos/ibc-go/v8/testing"
-	"github.com/evmos/evmos/v20/app"
 	"github.com/stretchr/testify/require"
 )
 

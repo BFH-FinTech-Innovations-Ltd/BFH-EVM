@@ -12,15 +12,15 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/testutil"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/vesting"
+	evmosutil "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil"
+	evmosutiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
+	vestingtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
-	"github.com/evmos/evmos/v20/precompiles/testutil"
-	"github.com/evmos/evmos/v20/precompiles/vesting"
-	evmosutil "github.com/evmos/evmos/v20/testutil"
-	evmosutiltx "github.com/evmos/evmos/v20/testutil/tx"
-	evmostypes "github.com/evmos/evmos/v20/types"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
-	vestingtypes "github.com/evmos/evmos/v20/x/vesting/types"
 )
 
 var (

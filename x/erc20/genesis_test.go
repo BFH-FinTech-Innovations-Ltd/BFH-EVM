@@ -15,14 +15,14 @@ import (
 
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	utiltx "github.com/evmos/evmos/v20/testutil/tx"
-	"github.com/evmos/evmos/v20/utils"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	utiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 
-	"github.com/evmos/evmos/v20/app"
-	"github.com/evmos/evmos/v20/x/erc20"
-	"github.com/evmos/evmos/v20/x/erc20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 )
 
 type GenesisTestSuite struct {

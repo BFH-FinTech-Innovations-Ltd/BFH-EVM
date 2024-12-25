@@ -5,11 +5,11 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/bank"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	evmosutiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/precompiles/bank"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	evmosutiltx "github.com/evmos/evmos/v20/testutil/tx"
 )
 
 func (s *PrecompileTestSuite) TestBalances() {

@@ -4,14 +4,14 @@ import (
 	"testing"
 	"time"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/evmos/evmos/v20/utils"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
 	"github.com/stretchr/testify/require"
 
-	simapp "github.com/evmos/evmos/v20/app"
-	"github.com/evmos/evmos/v20/x/epochs"
-	"github.com/evmos/evmos/v20/x/epochs/types"
+	simapp "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/epochs"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/epochs/types"
 )
 
 func TestEpochsExportGenesis(t *testing.T) {

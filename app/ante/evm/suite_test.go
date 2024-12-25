@@ -3,8 +3,8 @@ package evm_test
 import (
 	"testing"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
 	gethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/evmos/evmos/v20/utils"
 	"github.com/stretchr/testify/suite"
 )
 

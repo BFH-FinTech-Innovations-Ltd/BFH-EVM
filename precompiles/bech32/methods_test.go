@@ -3,11 +3,11 @@ package bech32_test
 import (
 	"fmt"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/cmd/config"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/bech32"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/cmd/config"
-	"github.com/evmos/evmos/v20/precompiles/bech32"
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
 )
 
 func (s *PrecompileTestSuite) TestHexToBech32() {

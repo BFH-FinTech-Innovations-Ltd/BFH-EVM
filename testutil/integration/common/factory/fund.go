@@ -6,9 +6,9 @@ package factory
 import (
 	"fmt"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
 )
 
 // FundTxFactory is the interface that wraps the common methods to fund accounts

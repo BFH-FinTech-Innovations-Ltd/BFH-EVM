@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"slices"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/factory"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	abcitypes "github.com/cometbft/cometbft/abci/types"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/factory"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // CheckTxTopics checks if all expected topics are present in the transaction response

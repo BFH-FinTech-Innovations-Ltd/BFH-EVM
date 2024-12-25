@@ -3,11 +3,11 @@ package keeper_test
 import (
 	"testing"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	"github.com/evmos/evmos/v20/x/inflation/v1/types"
 	"github.com/stretchr/testify/require"
 )
 

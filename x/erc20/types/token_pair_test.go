@@ -4,10 +4,10 @@ import (
 	"strings"
 	"testing"
 
+	utiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 	"github.com/cometbft/cometbft/crypto/tmhash"
 	"github.com/ethereum/go-ethereum/common"
-	utiltx "github.com/evmos/evmos/v20/testutil/tx"
-	"github.com/evmos/evmos/v20/x/erc20/types"
 	"github.com/stretchr/testify/suite"
 )
 

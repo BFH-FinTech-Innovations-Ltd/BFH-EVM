@@ -12,7 +12,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 
-	erc20api "github.com/evmos/evmos/v20/api/evmos/erc20/v1"
+	erc20api "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/api/evmos/erc20/v1"
 
 	"github.com/ethereum/go-ethereum/common"
 )

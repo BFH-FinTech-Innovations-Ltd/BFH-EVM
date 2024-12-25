@@ -41,8 +41,8 @@ RATIO = 10**10
 IBC_CHAINS_META = {
     "evmos": {
         "chain_name": "evmos_9002-1",
-        "bin": "evmosd",
-        "denom": "aevmos",
+        "bin": "bfhd",
+        "denom": "ubfh",
     },
     "evmos-6dec": {
         "chain_name": "evmosics_9000-1",
@@ -51,8 +51,8 @@ IBC_CHAINS_META = {
     },
     "evmos-rocksdb": {
         "chain_name": "evmos_9002-1",
-        "bin": "evmosd-rocksdb",
-        "denom": "aevmos",
+        "bin": "bfhd-rocksdb",
+        "denom": "ubfh",
     },
     "chainmain": {
         "chain_name": "chainmain-1",
@@ -107,7 +107,7 @@ def get_evmos_generator(
             tmp_path,
             26710,
             Path(__file__).parent / file,
-            chain_binary="evmosd-rocksdb",
+            chain_binary="bfhd-rocksdb",
             post_init=create_snapshots_dir,
         )
     elif is_6dec:

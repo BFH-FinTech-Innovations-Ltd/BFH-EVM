@@ -4,10 +4,13 @@ import (
 	"fmt"
 	"math/big"
 
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
-	evmostypes "github.com/evmos/evmos/v20/types"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 
 	"cosmossdk.io/math"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/gov"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/testutil"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/cosmos/cosmos-sdk/testutil/testdata"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
@@ -16,9 +19,6 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	govv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/precompiles/gov"
-	"github.com/evmos/evmos/v20/precompiles/testutil"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 var (
@@ -225,7 +225,7 @@ func (s *PrecompileTestSuite) TestGetDeposit() {
 				s.Require().NoError(err)
 				s.Require().Equal(tc.expPropNumber, out.Deposit.ProposalId)
 				s.Require().Equal(common.BytesToAddress(depositor.Bytes()), out.Deposit.Depositor)
-				s.Require().Equal([]cmn.Coin{{Denom: "aevmos", Amount: big.NewInt(100)}}, out.Deposit.Amount)
+				s.Require().Equal([]cmn.Coin{{Denom: "ubfh", Amount: big.NewInt(100)}}, out.Deposit.Amount)
 			} else {
 				s.Require().Error(err)
 				s.Require().Contains(err.Error(), tc.errContains)

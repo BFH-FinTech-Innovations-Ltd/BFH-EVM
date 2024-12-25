@@ -11,10 +11,10 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	v192 "github.com/evmos/evmos/v20/app/upgrades/v19_2"
-	testnetwork "github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	erc20types "github.com/evmos/evmos/v20/x/erc20/types"
-	"github.com/evmos/evmos/v20/x/evm/statedb"
+	v192 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/upgrades/v19_2"
+	testnetwork "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	erc20types "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/statedb"
 )
 
 const expNonce uint64 = 3

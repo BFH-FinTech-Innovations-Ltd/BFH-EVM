@@ -4,8 +4,8 @@
 package ante
 
 import (
+	evmante "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/evm"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	evmante "github.com/evmos/evmos/v20/app/ante/evm"
 )
 
 func newMonoEVMAnteHandler(options HandlerOptions) sdk.AnteHandler {

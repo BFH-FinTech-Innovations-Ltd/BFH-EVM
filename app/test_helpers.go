@@ -26,10 +26,10 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	evmostypes "github.com/evmos/evmos/v20/types"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 
-	"github.com/evmos/evmos/v20/cmd/config"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/cmd/config"
 )
 
 // DefaultTestingAppInit defines the IBC application used for testing
@@ -66,7 +66,7 @@ func Setup(
 	isCheckTx bool,
 	feemarketGenesis *feemarkettypes.GenesisState,
 	chainID string,
-) *Evmos {
+) *BfhApp {
 	privVal := mock.NewPV()
 	pubKey, _ := privVal.GetPubKey()
 
@@ -85,7 +85,7 @@ func Setup(
 	}
 
 	db := dbm.NewMemDB()
-	app := NewEvmos(
+	app := NewBfhApp(
 		log.NewNopLogger(),
 		db, nil, true, map[int64]bool{},
 		DefaultNodeHome, 5,
@@ -128,7 +128,7 @@ func Setup(
 	return app
 }
 
-func GenesisStateWithValSet(app *Evmos, genesisState evmostypes.GenesisState,
+func GenesisStateWithValSet(app *BfhApp, genesisState evmostypes.GenesisState,
 	valSet *cmttypes.ValidatorSet, genAccs []authtypes.GenesisAccount,
 	balances ...banktypes.Balance,
 ) evmostypes.GenesisState {
@@ -197,7 +197,7 @@ func GenesisStateWithValSet(app *Evmos, genesisState evmostypes.GenesisState,
 func SetupTestingApp(chainID string) func() (ibctesting.TestingApp, map[string]json.RawMessage) {
 	return func() (ibctesting.TestingApp, map[string]json.RawMessage) {
 		db := dbm.NewMemDB()
-		app := NewEvmos(
+		app := NewBfhApp(
 			log.NewNopLogger(),
 			db, nil, true,
 			map[int64]bool{},

@@ -23,7 +23,7 @@ import (
 	"github.com/crypto-org-chain/cronos/memiavl"
 	memiavlcfg "github.com/crypto-org-chain/cronos/store/config"
 
-	_ "github.com/evmos/evmos/v20/server/config/migration" // Add this import to set up the proper app.toml migration logic for sdk v0.50
+	_ "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server/config/migration" // Add this import to set up the proper app.toml migration logic for sdk v0.50
 )
 
 const (
@@ -110,16 +110,16 @@ const (
 	DefaultGasAdjustment = 1.2
 
 	// DefaultRosettaBlockchain defines the default blockchain name for the rosetta server
-	DefaultRosettaBlockchain = "evmos"
+	DefaultRosettaBlockchain = "bfh"
 
 	// DefaultRosettaNetwork defines the default network name for the rosetta server
-	DefaultRosettaNetwork = "evmos"
+	DefaultRosettaNetwork = "bfh"
 
 	// DefaultRosettaGasToSuggest defines the default gas to suggest for the rosetta server
 	DefaultRosettaGasToSuggest = 300_000
 
 	// DefaultRosettaDenomToSuggest defines the default denom for fee suggestion
-	DefaultRosettaDenomToSuggest = "aevmos"
+	DefaultRosettaDenomToSuggest = "ubfh"
 
 	// ============================
 	//           MemIAVL

@@ -1,4 +1,4 @@
-module github.com/evmos/evmos/v20
+module github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM
 
 go 1.22.8
 

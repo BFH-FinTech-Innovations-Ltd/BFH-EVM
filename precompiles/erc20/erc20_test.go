@@ -6,8 +6,8 @@ package erc20_test
 import (
 	"math/big"
 
-	auth "github.com/evmos/evmos/v20/precompiles/authorization"
-	"github.com/evmos/evmos/v20/precompiles/erc20"
+	auth "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/erc20"
 )
 
 func (s *PrecompileTestSuite) TestIsTransaction() {

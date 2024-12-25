@@ -1,10 +1,10 @@
 package backend
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/backend/mocks"
+	rpc "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/types"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/evmos/evmos/v20/rpc/backend/mocks"
-	rpc "github.com/evmos/evmos/v20/rpc/types"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
 )
 
 var _ feemarkettypes.QueryClient = &mocks.FeeMarketQueryClient{}

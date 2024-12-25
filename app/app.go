@@ -120,55 +120,55 @@ import (
 	consensusparamkeeper "github.com/cosmos/cosmos-sdk/x/consensus/keeper"
 	consensusparamtypes "github.com/cosmos/cosmos-sdk/x/consensus/types"
 
-	"github.com/evmos/evmos/v20/encoding"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/encoding"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 
 	// unnamed import of statik for swagger UI support
-	_ "github.com/evmos/evmos/v20/client/docs/statik"
-	"github.com/evmos/evmos/v20/utils"
+	_ "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/client/docs/statik"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
 
-	evmostypes "github.com/evmos/evmos/v20/types"
-	"github.com/evmos/evmos/v20/x/epochs"
-	epochskeeper "github.com/evmos/evmos/v20/x/epochs/keeper"
-	epochstypes "github.com/evmos/evmos/v20/x/epochs/types"
-	"github.com/evmos/evmos/v20/x/evm"
-	evmkeeper "github.com/evmos/evmos/v20/x/evm/keeper"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
-	inflation "github.com/evmos/evmos/v20/x/inflation/v1"
-	inflationkeeper "github.com/evmos/evmos/v20/x/inflation/v1/keeper"
-	inflationtypes "github.com/evmos/evmos/v20/x/inflation/v1/types"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/epochs"
+	epochskeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/epochs/keeper"
+	epochstypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/epochs/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm"
+	evmkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/keeper"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
+	inflation "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1"
+	inflationkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/keeper"
+	inflationtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/types"
 
-	"github.com/evmos/evmos/v20/app/ante"
-	ethante "github.com/evmos/evmos/v20/app/ante/evm"
-	"github.com/evmos/evmos/v20/app/post"
-	v20 "github.com/evmos/evmos/v20/app/upgrades/v20"
-	srvflags "github.com/evmos/evmos/v20/server/flags"
-	"github.com/evmos/evmos/v20/x/erc20"
-	erc20keeper "github.com/evmos/evmos/v20/x/erc20/keeper"
-	erc20types "github.com/evmos/evmos/v20/x/erc20/types"
-	"github.com/evmos/evmos/v20/x/feemarket"
-	feemarketkeeper "github.com/evmos/evmos/v20/x/feemarket/keeper"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
-	"github.com/evmos/evmos/v20/x/staking"
-	stakingkeeper "github.com/evmos/evmos/v20/x/staking/keeper"
-	"github.com/evmos/evmos/v20/x/vesting"
-	vestingkeeper "github.com/evmos/evmos/v20/x/vesting/keeper"
-	vestingtypes "github.com/evmos/evmos/v20/x/vesting/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante"
+	ethante "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/evm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/post"
+	v20 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/upgrades/v20"
+	srvflags "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server/flags"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20"
+	erc20keeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/keeper"
+	erc20types "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket"
+	feemarketkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/keeper"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/staking"
+	stakingkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/staking/keeper"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting"
+	vestingkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting/keeper"
+	vestingtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting/types"
 
 	// NOTE: override ICS20 keeper to support IBC transfers of ERC20 tokens
-	"github.com/evmos/evmos/v20/x/ibc/transfer"
-	transferkeeper "github.com/evmos/evmos/v20/x/ibc/transfer/keeper"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/ibc/transfer"
+	transferkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/ibc/transfer/keeper"
 
 	memiavlstore "github.com/crypto-org-chain/cronos/store"
 
 	// Force-load the tracer engines to trigger registration due to Go-Ethereum v1.10.15 changes
-	_ "github.com/evmos/evmos/v20/x/evm/core/tracers/js"
-	_ "github.com/evmos/evmos/v20/x/evm/core/tracers/native"
+	_ "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/tracers/js"
+	_ "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/tracers/native"
 )
 
 func init() {
 	var err error
-	DefaultNodeHome, err = clienthelpers.GetNodeHomeDirectory(".evmosd")
+	DefaultNodeHome, err = clienthelpers.GetNodeHomeDirectory(".bfhd")
 	if err != nil {
 		panic(err)
 	}
@@ -183,7 +183,7 @@ func init() {
 }
 
 // Name defines the application binary name
-const Name = "evmosd"
+const Name = "bfhd"
 
 var (
 	// DefaultNodeHome default home directories for the application daemon
@@ -206,15 +206,15 @@ var (
 )
 
 var (
-	_ servertypes.Application = (*Evmos)(nil)
-	_ ibctesting.TestingApp   = (*Evmos)(nil)
-	_ runtime.AppI            = (*Evmos)(nil)
+	_ servertypes.Application = (*BfhApp)(nil)
+	_ ibctesting.TestingApp   = (*BfhApp)(nil)
+	_ runtime.AppI            = (*BfhApp)(nil)
 )
 
 // Evmos implements an extended ABCI application. It is an application
 // that may process transactions through Ethereum's EVM running atop of
 // Tendermint consensus.
-type Evmos struct {
+type BfhApp struct {
 	*baseapp.BaseApp
 
 	// encoding
@@ -280,12 +280,12 @@ type Evmos struct {
 }
 
 // SimulationManager implements runtime.AppI
-func (*Evmos) SimulationManager() *module.SimulationManager {
+func (*BfhApp) SimulationManager() *module.SimulationManager {
 	panic("unimplemented")
 }
 
 // NewEvmos returns a reference to a new initialized Ethermint application.
-func NewEvmos(
+func NewBfhApp(
 	logger log.Logger,
 	db dbm.DB,
 	traceStore io.Writer,
@@ -296,7 +296,7 @@ func NewEvmos(
 	appOpts servertypes.AppOptions,
 	evmosAppOptions EvmosOptionsFn,
 	baseAppOptions ...func(*baseapp.BaseApp),
-) *Evmos {
+) *BfhApp {
 	encodingConfig := encoding.MakeConfig()
 	appCodec := encodingConfig.Codec
 	cdc := encodingConfig.Amino
@@ -332,7 +332,7 @@ func NewEvmos(
 
 	keys, memKeys, tkeys := StoreKeys()
 
-	app := &Evmos{
+	app := &BfhApp{
 		BaseApp:           bApp,
 		cdc:               cdc,
 		appCodec:          appCodec,
@@ -851,9 +851,9 @@ func NewEvmos(
 }
 
 // Name returns the name of the App
-func (app *Evmos) Name() string { return app.BaseApp.Name() }
+func (app *BfhApp) Name() string { return app.BaseApp.Name() }
 
-func (app *Evmos) setAnteHandler(txConfig client.TxConfig, maxGasWanted uint64) {
+func (app *BfhApp) setAnteHandler(txConfig client.TxConfig, maxGasWanted uint64) {
 	options := ante.HandlerOptions{
 		Cdc:                    app.appCodec,
 		AccountKeeper:          app.AccountKeeper,
@@ -878,7 +878,7 @@ func (app *Evmos) setAnteHandler(txConfig client.TxConfig, maxGasWanted uint64) 
 	app.SetAnteHandler(ante.NewAnteHandler(options))
 }
 
-func (app *Evmos) setPostHandler() {
+func (app *BfhApp) setPostHandler() {
 	options := post.HandlerOptions{
 		FeeCollectorName: authtypes.FeeCollectorName,
 		BankKeeper:       app.BankKeeper,
@@ -894,17 +894,17 @@ func (app *Evmos) setPostHandler() {
 // BeginBlocker runs the Tendermint ABCI BeginBlock logic. It executes state changes at the beginning
 // of the new block for every registered module. If there is a registered fork at the current height,
 // BeginBlocker will schedule the upgrade plan and perform the state migration (if any).
-func (app *Evmos) BeginBlocker(ctx sdk.Context) (sdk.BeginBlock, error) {
+func (app *BfhApp) BeginBlocker(ctx sdk.Context) (sdk.BeginBlock, error) {
 	return app.mm.BeginBlock(ctx)
 }
 
 // EndBlocker updates every end block
-func (app *Evmos) EndBlocker(ctx sdk.Context) (sdk.EndBlock, error) {
+func (app *BfhApp) EndBlocker(ctx sdk.Context) (sdk.EndBlock, error) {
 	return app.mm.EndBlock(ctx)
 }
 
 // The DeliverTx method is intentionally decomposed to calculate the transactions per second.
-func (app *Evmos) FinalizeBlock(req *abci.RequestFinalizeBlock) (res *abci.ResponseFinalizeBlock, err error) {
+func (app *BfhApp) FinalizeBlock(req *abci.RequestFinalizeBlock) (res *abci.ResponseFinalizeBlock, err error) {
 	defer func() {
 		// TODO: Record the count along with the code and or reason so as to display
 		// in the transactions per second live dashboards.
@@ -921,7 +921,7 @@ func (app *Evmos) FinalizeBlock(req *abci.RequestFinalizeBlock) (res *abci.Respo
 }
 
 // InitChainer updates at chain initialization
-func (app *Evmos) InitChainer(ctx sdk.Context, req *abci.RequestInitChain) (*abci.ResponseInitChain, error) {
+func (app *BfhApp) InitChainer(ctx sdk.Context, req *abci.RequestInitChain) (*abci.ResponseInitChain, error) {
 	var genesisState evmostypes.GenesisState
 	if err := json.Unmarshal(req.AppStateBytes, &genesisState); err != nil {
 		panic(err)
@@ -934,17 +934,17 @@ func (app *Evmos) InitChainer(ctx sdk.Context, req *abci.RequestInitChain) (*abc
 	return app.mm.InitGenesis(ctx, app.appCodec, genesisState)
 }
 
-func (app *Evmos) PreBlocker(ctx sdk.Context, _ *abci.RequestFinalizeBlock) (*sdk.ResponsePreBlock, error) {
+func (app *BfhApp) PreBlocker(ctx sdk.Context, _ *abci.RequestFinalizeBlock) (*sdk.ResponsePreBlock, error) {
 	return app.mm.PreBlock(ctx)
 }
 
 // LoadHeight loads state at a particular height
-func (app *Evmos) LoadHeight(height int64) error {
+func (app *BfhApp) LoadHeight(height int64) error {
 	return app.LoadVersion(height)
 }
 
 // ModuleAccountAddrs returns all the app's module account addresses.
-func (app *Evmos) ModuleAccountAddrs() map[string]bool {
+func (app *BfhApp) ModuleAccountAddrs() map[string]bool {
 	modAccAddrs := make(map[string]bool)
 
 	accs := make([]string, 0, len(maccPerms))
@@ -967,7 +967,7 @@ func (app *Evmos) ModuleAccountAddrs() map[string]bool {
 //   - module accounts
 //   - Ethereum's native precompiles
 //   - the static precompiled contracts available through evmOS
-func (app *Evmos) BlockedAddrs() map[string]bool {
+func (app *BfhApp) BlockedAddrs() map[string]bool {
 	blockedAddrs := make(map[string]bool)
 
 	accs := make([]string, 0, len(maccPerms))
@@ -996,7 +996,7 @@ func (app *Evmos) BlockedAddrs() map[string]bool {
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *Evmos) LegacyAmino() *codec.LegacyAmino {
+func (app *BfhApp) LegacyAmino() *codec.LegacyAmino {
 	return app.cdc
 }
 
@@ -1004,52 +1004,52 @@ func (app *Evmos) LegacyAmino() *codec.LegacyAmino {
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *Evmos) AppCodec() codec.Codec {
+func (app *BfhApp) AppCodec() codec.Codec {
 	return app.appCodec
 }
 
 // DefaultGenesis returns a default genesis from the registered AppModuleBasic's.
-func (app *Evmos) DefaultGenesis() evmostypes.GenesisState {
+func (app *BfhApp) DefaultGenesis() evmostypes.GenesisState {
 	return app.BasicModuleManager.DefaultGenesis(app.appCodec)
 }
 
 // InterfaceRegistry returns Evmos's InterfaceRegistry
-func (app *Evmos) InterfaceRegistry() types.InterfaceRegistry {
+func (app *BfhApp) InterfaceRegistry() types.InterfaceRegistry {
 	return app.interfaceRegistry
 }
 
 // GetKey returns the KVStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Evmos) GetKey(storeKey string) *storetypes.KVStoreKey {
+func (app *BfhApp) GetKey(storeKey string) *storetypes.KVStoreKey {
 	return app.keys[storeKey]
 }
 
 // GetTKey returns the TransientStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Evmos) GetTKey(storeKey string) *storetypes.TransientStoreKey {
+func (app *BfhApp) GetTKey(storeKey string) *storetypes.TransientStoreKey {
 	return app.tkeys[storeKey]
 }
 
 // GetMemKey returns the MemStoreKey for the provided mem key.
 //
 // NOTE: This is solely used for testing purposes.
-func (app *Evmos) GetMemKey(storeKey string) *storetypes.MemoryStoreKey {
+func (app *BfhApp) GetMemKey(storeKey string) *storetypes.MemoryStoreKey {
 	return app.memKeys[storeKey]
 }
 
 // GetSubspace returns a param subspace for a given module name.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Evmos) GetSubspace(moduleName string) paramstypes.Subspace {
+func (app *BfhApp) GetSubspace(moduleName string) paramstypes.Subspace {
 	subspace, _ := app.ParamsKeeper.GetSubspace(moduleName)
 	return subspace
 }
 
 // RegisterAPIRoutes registers all application module routes with the provided
 // API server.
-func (app *Evmos) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConfig) {
+func (app *BfhApp) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConfig) {
 	clientCtx := apiSvr.ClientCtx
 
 	// Register new tx routes from grpc-gateway.
@@ -1068,12 +1068,12 @@ func (app *Evmos) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConf
 	}
 }
 
-func (app *Evmos) RegisterTxService(clientCtx client.Context) {
+func (app *BfhApp) RegisterTxService(clientCtx client.Context) {
 	authtx.RegisterTxService(app.GRPCQueryRouter(), clientCtx, app.BaseApp.Simulate, app.interfaceRegistry)
 }
 
 // RegisterTendermintService implements the Application.RegisterTendermintService method.
-func (app *Evmos) RegisterTendermintService(clientCtx client.Context) {
+func (app *BfhApp) RegisterTendermintService(clientCtx client.Context) {
 	cmtservice.RegisterTendermintService(
 		clientCtx,
 		app.BaseApp.GRPCQueryRouter(),
@@ -1084,44 +1084,44 @@ func (app *Evmos) RegisterTendermintService(clientCtx client.Context) {
 
 // RegisterNodeService registers the node gRPC service on the provided
 // application gRPC query router.
-func (app *Evmos) RegisterNodeService(clientCtx client.Context, cfg config.Config) {
+func (app *BfhApp) RegisterNodeService(clientCtx client.Context, cfg config.Config) {
 	node.RegisterNodeService(clientCtx, app.GRPCQueryRouter(), cfg)
 }
 
 // IBC Go TestingApp functions
 
 // GetBaseApp implements the TestingApp interface.
-func (app *Evmos) GetBaseApp() *baseapp.BaseApp {
+func (app *BfhApp) GetBaseApp() *baseapp.BaseApp {
 	return app.BaseApp
 }
 
 // GetStakingKeeper implements the TestingApp interface.
-func (app *Evmos) GetStakingKeeper() ibctestingtypes.StakingKeeper {
+func (app *BfhApp) GetStakingKeeper() ibctestingtypes.StakingKeeper {
 	return app.StakingKeeper
 }
 
 // GetStakingKeeperSDK implements the TestingApp interface.
-func (app *Evmos) GetStakingKeeperSDK() stakingkeeper.Keeper {
+func (app *BfhApp) GetStakingKeeperSDK() stakingkeeper.Keeper {
 	return app.StakingKeeper
 }
 
 // GetIBCKeeper implements the TestingApp interface.
-func (app *Evmos) GetIBCKeeper() *ibckeeper.Keeper {
+func (app *BfhApp) GetIBCKeeper() *ibckeeper.Keeper {
 	return app.IBCKeeper
 }
 
 // GetScopedIBCKeeper implements the TestingApp interface.
-func (app *Evmos) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
+func (app *BfhApp) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
 	return app.ScopedIBCKeeper
 }
 
 // GetTxConfig implements the TestingApp interface.
-func (app *Evmos) GetTxConfig() client.TxConfig {
+func (app *BfhApp) GetTxConfig() client.TxConfig {
 	return app.txConfig
 }
 
 // AutoCliOpts returns the autocli options for the app.
-func (app *Evmos) AutoCliOpts() autocli.AppOptions {
+func (app *BfhApp) AutoCliOpts() autocli.AppOptions {
 	modules := make(map[string]appmodule.AppModule, 0)
 	for _, m := range app.mm.Modules {
 		if moduleWithName, ok := m.(module.HasName); ok {
@@ -1192,7 +1192,7 @@ func initParamsKeeper(
 	return paramsKeeper
 }
 
-func (app *Evmos) setupUpgradeHandlers() {
+func (app *BfhApp) setupUpgradeHandlers() {
 	// v20 upgrade handler
 	app.UpgradeKeeper.SetUpgradeHandler(
 		v20.UpgradeName,

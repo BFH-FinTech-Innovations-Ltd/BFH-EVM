@@ -4,11 +4,11 @@
 package keeper
 
 import (
+	v3 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/migrations/v3"
+	v4 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/migrations/v4"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	v3 "github.com/evmos/evmos/v20/x/erc20/migrations/v3"
-	v4 "github.com/evmos/evmos/v20/x/erc20/migrations/v4"
-	"github.com/evmos/evmos/v20/x/erc20/types"
 )
 
 var _ module.MigrationHandler = Migrator{}.Migrate2to3

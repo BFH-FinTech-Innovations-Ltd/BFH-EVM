@@ -10,11 +10,11 @@ import (
 	"google.golang.org/grpc/status"
 
 	"cosmossdk.io/store/prefix"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
-	evmostypes "github.com/evmos/evmos/v20/types"
 
-	"github.com/evmos/evmos/v20/x/erc20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 )
 
 var _ types.QueryServer = Keeper{}

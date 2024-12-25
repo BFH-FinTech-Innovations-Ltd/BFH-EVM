@@ -3,9 +3,9 @@
 package keeper
 
 import (
+	v8 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/migrations/v8"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	v8 "github.com/evmos/evmos/v20/x/evm/migrations/v8"
-	"github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // Migrator is a struct for handling in-place store migrations.

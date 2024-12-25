@@ -18,9 +18,9 @@ import (
 	"time"
 
 	errorsmod "cosmossdk.io/errors"
+	testnetwork "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/ethereum/go-ethereum/common"
-	testnetwork "github.com/evmos/evmos/v20/testutil/integration/evmos/network"
 	"github.com/ory/dockertest/v3"
 	"github.com/ory/dockertest/v3/docker"
 )
@@ -239,7 +239,7 @@ func (m *Manager) WaitForHeight(ctx context.Context, height int) (string, error)
 
 // GetNodeHeight calls the Evmos CLI in the current node container to get the current block height
 func (m *Manager) GetNodeHeight(ctx context.Context) (int, error) {
-	cmd := []string{"evmosd", "q", "block"}
+	cmd := []string{"bfhd", "q", "block"}
 	splitIdx := 0 // split index for the lines in the output - in newer versions the output is in the second line
 	useV50 := false
 
@@ -334,7 +334,7 @@ func UnwrapBlockHeightPostV50(input string) (int, error) {
 // GetNodeVersion calls the Evmos CLI in the current node container to get the
 // current node version
 func (m *Manager) GetNodeVersion(ctx context.Context) (string, error) {
-	exec, err := m.CreateExec([]string{"evmosd", "version"}, m.ContainerID())
+	exec, err := m.CreateExec([]string{"bfhd", "version"}, m.ContainerID())
 	if err != nil {
 		return "", fmt.Errorf("create exec error: %w", err)
 	}
@@ -377,7 +377,7 @@ func (m *Manager) GetUpgradeHeight(ctx context.Context, chainID string) (uint, e
 
 // getTimeoutCommit returns the timeout commit duration for the current node
 func (m *Manager) getTimeoutCommit(ctx context.Context) (*big.Int, error) {
-	exec, err := m.CreateExec([]string{"grep", `\s*timeout_commit =`, "/root/.evmosd/config/config.toml"}, m.ContainerID())
+	exec, err := m.CreateExec([]string{"grep", `\s*timeout_commit =`, "/root/.bfhd/config/config.toml"}, m.ContainerID())
 	if err != nil {
 		return common.Big0, fmt.Errorf("create exec error: %w", err)
 	}

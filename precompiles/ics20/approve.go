@@ -4,11 +4,11 @@
 package ics20
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/precompiles/authorization"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 // Approve implements the ICS20 approve transactions.

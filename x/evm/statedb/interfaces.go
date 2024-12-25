@@ -3,9 +3,9 @@
 package statedb
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 // ExtStateDB defines an extension to the interface provided by the go-ethereum

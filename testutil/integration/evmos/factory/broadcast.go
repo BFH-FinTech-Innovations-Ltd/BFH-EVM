@@ -4,12 +4,12 @@ package factory
 
 import (
 	errorsmod "cosmossdk.io/errors"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/testutil"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	abcitypes "github.com/cometbft/cometbft/abci/types"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/evmos/v20/precompiles/testutil"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // ExecuteEthTx executes an Ethereum transaction - contract call with the provided private key and txArgs

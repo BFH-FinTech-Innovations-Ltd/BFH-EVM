@@ -52,7 +52,7 @@ def test_fund_community_pool(evmos_cluster, name, deposit_amt, args, err_contain
     """
     gas_limit = 200_000
     gas_price = evmos_cluster.w3.eth.gas_price
-    comm_pool_denom = "aevmos"
+    comm_pool_denom = "ubfh"
     cli = evmos_cluster.cosmos_cli()
     fee_denom = cli.evm_denom()
 
@@ -67,9 +67,9 @@ def test_fund_community_pool(evmos_cluster, name, deposit_amt, args, err_contain
 
     if deposit_amt is not None:
         # deposit some funds to the contract.
-        # In case evm_denom != 'aevmos', we'll need
+        # In case evm_denom != 'ubfh', we'll need
         # to fund the contract via a cosmos tx,
-        # because the precompile only funds the community pool with 'aevmos'
+        # because the precompile only funds the community pool with 'ubfh'
         if fee_denom == comm_pool_denom:
             deposit_tx = eth_contract.functions.deposit().build_transaction(
                 {
@@ -117,8 +117,8 @@ def test_fund_community_pool(evmos_cluster, name, deposit_amt, args, err_contain
         evmos_cluster, evmos_cluster.cosmos_cli().address("signer2")
     )
 
-    # comm pool can have other coins balance (e.g. when evm_denom != 'aevmos')
-    # For the precompiles, we only care about the 'aevmos' balance
+    # comm pool can have other coins balance (e.g. when evm_denom != 'ubfh')
+    # For the precompiles, we only care about the 'ubfh' balance
     # because is the denomination used on the precompile tx
     pool_balances = evmos_cluster.cosmos_cli().distribution_community()
     community_prev_balance = amount_of_dec_coin(pool_balances, comm_pool_denom)

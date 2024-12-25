@@ -3,8 +3,8 @@
 package v3
 
 import (
+	vestingtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	vestingtypes "github.com/evmos/evmos/v20/x/vesting/types"
 )
 
 // MigrateStore migrates the x/vesting module state from the consensus version 2 to

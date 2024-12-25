@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"sort"
 
-	cryptohd "github.com/evmos/evmos/v20/crypto/hd"
+	cryptohd "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/hd"
 
 	bip39 "github.com/cosmos/go-bip39"
 	"github.com/spf13/cobra"

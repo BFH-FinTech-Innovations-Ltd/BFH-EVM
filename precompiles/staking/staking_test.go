@@ -4,22 +4,22 @@ import (
 	"math/big"
 	"time"
 
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
 
 	"cosmossdk.io/math"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/staking"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/statedb"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/evmos/evmos/v20/app"
-	"github.com/evmos/evmos/v20/precompiles/authorization"
-	"github.com/evmos/evmos/v20/precompiles/staking"
-	"github.com/evmos/evmos/v20/x/evm/statedb"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 func (s *PrecompileTestSuite) TestIsTransaction() {

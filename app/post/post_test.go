@@ -4,9 +4,9 @@
 package post_test
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/post"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	"github.com/evmos/evmos/v20/app/post"
 )
 
 func (s *PostTestSuite) TestPostHandlerOptions() {

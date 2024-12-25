@@ -3,10 +3,10 @@ package keeper_test
 import (
 	"testing"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	feemarketkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/keeper"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	feemarketkeeper "github.com/evmos/evmos/v20/x/feemarket/keeper"
-	"github.com/evmos/evmos/v20/x/feemarket/types"
 	"github.com/stretchr/testify/require"
 )
 

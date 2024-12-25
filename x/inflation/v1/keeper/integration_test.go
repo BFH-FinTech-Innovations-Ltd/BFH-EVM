@@ -11,10 +11,10 @@ import (
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"
 
+	integrationutils "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/utils"
+	epochstypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/epochs/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	integrationutils "github.com/evmos/evmos/v20/testutil/integration/evmos/utils"
-	epochstypes "github.com/evmos/evmos/v20/x/epochs/types"
-	"github.com/evmos/evmos/v20/x/inflation/v1/types"
 )
 
 var (

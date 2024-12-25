@@ -6,15 +6,15 @@ package gov
 import (
 	"fmt"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
 	"github.com/cosmos/cosmos-sdk/types/query"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/utils"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
 )
 
 // EventVote defines the event data for the Vote transaction.

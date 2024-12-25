@@ -5,7 +5,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/evmos/evmos/v20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 )
 
 // Validate performs a basic validation of a GenesisAccount fields.

@@ -14,8 +14,8 @@ import (
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/p256"
 	"github.com/cometbft/cometbft/crypto"
-	"github.com/evmos/evmos/v20/precompiles/p256"
 	"github.com/stretchr/testify/suite"
 	"golang.org/x/crypto/cryptobyte"
 	"golang.org/x/crypto/cryptobyte/asn1"

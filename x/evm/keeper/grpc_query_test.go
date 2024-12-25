@@ -6,26 +6,26 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/evmos/evmos/v20/x/evm/keeper/testdata"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/keeper/testdata"
 
 	sdkmath "cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
+	ethlogger "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/logger"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 	ethparams "github.com/ethereum/go-ethereum/params"
-	ethlogger "github.com/evmos/evmos/v20/x/evm/core/logger"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server/config"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/factory"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/statedb"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/evmos/evmos/v20/server/config"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/factory"
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	"github.com/evmos/evmos/v20/x/evm/statedb"
-	"github.com/evmos/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
 )
 
 // Not valid Ethereum address

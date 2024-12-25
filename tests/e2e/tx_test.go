@@ -8,9 +8,9 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/tests/e2e/upgrade"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/evmos/v20/tests/e2e/upgrade"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // executeTransactions executes some sample transactions to check they are still working after the upgrade.

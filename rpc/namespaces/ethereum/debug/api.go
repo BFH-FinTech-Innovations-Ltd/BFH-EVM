@@ -16,7 +16,7 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 
 	stderrors "github.com/pkg/errors"
 
@@ -28,8 +28,8 @@ import (
 	"github.com/ethereum/go-ethereum/consensus/ethash"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/evmos/evmos/v20/rpc/backend"
-	rpctypes "github.com/evmos/evmos/v20/rpc/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/backend"
+	rpctypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/types"
 )
 
 // HandlerT keeps track of the cpu profiler and trace execution

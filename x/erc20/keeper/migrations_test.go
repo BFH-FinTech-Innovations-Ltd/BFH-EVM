@@ -2,15 +2,15 @@ package keeper_test
 
 import (
 	storetypes "cosmossdk.io/store/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/encoding"
+	erc20keeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/keeper"
+	v3types "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/migrations/v3/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/evmos/evmos/v20/encoding"
-	erc20keeper "github.com/evmos/evmos/v20/x/erc20/keeper"
-	v3types "github.com/evmos/evmos/v20/x/erc20/migrations/v3/types"
-	"github.com/evmos/evmos/v20/x/erc20/types"
 )
 
 type mockSubspace struct {

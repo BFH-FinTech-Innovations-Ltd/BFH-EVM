@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	abci "github.com/cometbft/cometbft/abci/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // CheckVMError is a helper function used to check if the transaction is reverted with the expected error message

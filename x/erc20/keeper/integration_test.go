@@ -12,12 +12,12 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/common/factory"
+	testutils "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/utils"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/testutil/integration/common/factory"
-	testutils "github.com/evmos/evmos/v20/testutil/integration/evmos/utils"
-	"github.com/evmos/evmos/v20/x/erc20/types"
 )
 
 func TestPrecompileIntegrationTestSuite(t *testing.T) {

@@ -3,9 +3,9 @@ package core
 import (
 	"math/big"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 // CanTransfer checks whether there are enough funds in the address' account to make a transfer.

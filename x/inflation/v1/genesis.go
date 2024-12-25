@@ -5,9 +5,9 @@ package inflation
 
 import (
 	errorsmod "cosmossdk.io/errors"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/keeper"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/evmos/v20/x/inflation/v1/keeper"
-	"github.com/evmos/evmos/v20/x/inflation/v1/types"
 )
 
 // InitGenesis import module genesis

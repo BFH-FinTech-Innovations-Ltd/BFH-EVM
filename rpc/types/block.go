@@ -19,7 +19,7 @@ import (
 
 	grpctypes "github.com/cosmos/cosmos-sdk/types/grpc"
 
-	"github.com/evmos/evmos/v20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 )
 
 // BlockNumber represents decoding hex string to block values

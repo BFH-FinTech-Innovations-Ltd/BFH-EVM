@@ -3,7 +3,7 @@ package utils_test
 import (
 	"testing"
 
-	"github.com/evmos/evmos/v20/app/ante/testutils"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/testutils"
 	"github.com/stretchr/testify/suite"
 )
 

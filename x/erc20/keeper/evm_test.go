@@ -7,16 +7,16 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
+	testfactory "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/factory"
+	utiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
-	testfactory "github.com/evmos/evmos/v20/testutil/integration/evmos/factory"
-	utiltx "github.com/evmos/evmos/v20/testutil/tx"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/evmos/evmos/v20/contracts"
-	"github.com/evmos/evmos/v20/x/erc20/keeper"
-	"github.com/evmos/evmos/v20/x/erc20/types"
-	erc20mocks "github.com/evmos/evmos/v20/x/erc20/types/mocks"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/contracts"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/keeper"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
+	erc20mocks "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types/mocks"
 )
 
 func (suite *KeeperTestSuite) TestQueryERC20() {

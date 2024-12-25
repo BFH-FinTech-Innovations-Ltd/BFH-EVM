@@ -3,8 +3,8 @@ package hd
 import (
 	"testing"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	"github.com/evmos/evmos/v20/types"
 )
 
 func BenchmarkEthSecp256k1Algo_Derive(b *testing.B) {

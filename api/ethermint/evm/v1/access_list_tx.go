@@ -5,9 +5,9 @@ package evmv1
 import (
 	"math/big"
 
+	ethutils "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils/eth"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethutils "github.com/evmos/evmos/v20/utils/eth"
 )
 
 // GetChainID returns the chain id field from the AccessListTx

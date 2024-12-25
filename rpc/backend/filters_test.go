@@ -3,12 +3,12 @@ package backend
 import (
 	"encoding/json"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/backend/mocks"
+	ethrpc "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	cmttypes "github.com/cometbft/cometbft/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/evmos/evmos/v20/rpc/backend/mocks"
-	ethrpc "github.com/evmos/evmos/v20/rpc/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 func (suite *BackendTestSuite) TestGetLogs() {

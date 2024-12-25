@@ -13,9 +13,9 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	"github.com/ethereum/go-ethereum/common"
 	geth "github.com/ethereum/go-ethereum/params"
-	"github.com/evmos/evmos/v20/types"
 )
 
 // testChainID represents the ChainID used for the purpose of testing.

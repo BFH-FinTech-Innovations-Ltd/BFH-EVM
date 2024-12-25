@@ -4,9 +4,9 @@ package testutil
 
 import (
 	"cosmossdk.io/math"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
-	evmostypes "github.com/evmos/evmos/v20/types"
 )
 
 type vestingSchedule struct {

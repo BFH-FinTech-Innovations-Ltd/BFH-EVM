@@ -4,12 +4,12 @@
 package grpc
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/common/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/evmos/evmos/v20/testutil/integration/common/network"
 )
 
 // Handler is an interface that defines the common methods that are used to query

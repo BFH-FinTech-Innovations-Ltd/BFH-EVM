@@ -4,8 +4,8 @@
 package tests
 
 import (
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
-	evmostypes "github.com/evmos/evmos/v20/types"
 )
 
 var (

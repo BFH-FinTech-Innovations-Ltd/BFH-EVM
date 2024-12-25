@@ -4,15 +4,15 @@
 package grpc
 
 import (
+	commongrpc "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/common/grpc"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
+	feemarkettypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
+	infltypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/ethereum/go-ethereum/common"
-	commongrpc "github.com/evmos/evmos/v20/testutil/integration/common/grpc"
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/evmos/evmos/v20/x/feemarket/types"
-	infltypes "github.com/evmos/evmos/v20/x/inflation/v1/types"
 )
 
 // Handler is an interface that defines the methods that are used to query

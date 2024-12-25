@@ -1,21 +1,21 @@
 {
   "metadata": [
     {
-      "description": "The native staking and governance token of the Evmos chain",
+      "description": "The native staking and governance token of the Bfh chain",
       "denom_units": [
         {
-          "denom": "aevmos",
+          "denom": "ubfh",
           "exponent": 0
         },
         {
-          "denom": "evmos",
+          "denom": "ubfh",
           "exponent": 18
         }
       ],
-      "base": "aevmos",
-      "display": "aevmos",
-      "name": "aevmos",
-      "symbol": "EVMOS"
+      "base": "ubfh",
+      "display": "ubfh",
+      "name": "ubfh",
+      "symbol": "BFH"
     },
     {
       "description": "The native staking and governance token of the Osmosis chain",

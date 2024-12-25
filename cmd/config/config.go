@@ -6,7 +6,7 @@ package config
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/evmos/evmos/v20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 )
 
 const (

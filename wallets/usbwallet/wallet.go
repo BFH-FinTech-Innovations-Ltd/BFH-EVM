@@ -12,11 +12,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/accounts"
 	gethaccounts "github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/evmos/evmos/v20/wallets/accounts"
 	usb "github.com/zondax/hid"
 )
 

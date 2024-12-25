@@ -4,9 +4,9 @@ package cosmos
 
 import (
 	errorsmod "cosmossdk.io/errors"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // RejectMessagesDecorator prevents invalid msg types from being executed

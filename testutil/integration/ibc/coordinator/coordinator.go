@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
+	evmosibc "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/ibc/testing"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/common/network"
+	ibcchain "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/ibc/chain"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	ibctesting "github.com/cosmos/ibc-go/v8/testing"
-	evmosibc "github.com/evmos/evmos/v20/ibc/testing"
-	"github.com/evmos/evmos/v20/testutil/integration/common/network"
-	ibcchain "github.com/evmos/evmos/v20/testutil/integration/ibc/chain"
 )
 
 // Coordinator is the interface that defines the methods that are used to

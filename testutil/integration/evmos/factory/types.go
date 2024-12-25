@@ -4,9 +4,9 @@ package factory
 
 import (
 	sdkmath "cosmossdk.io/math"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // CosmosTxArgs contains the params to create a cosmos tx

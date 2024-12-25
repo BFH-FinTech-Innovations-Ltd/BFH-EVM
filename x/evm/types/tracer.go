@@ -7,11 +7,11 @@ import (
 	"os"
 	"time"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/logger"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/params"
-	"github.com/evmos/evmos/v20/x/evm/core/logger"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 const (

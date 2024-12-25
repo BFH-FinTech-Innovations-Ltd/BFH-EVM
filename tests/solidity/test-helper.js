@@ -32,7 +32,7 @@ function checkTestEnv () {
     )
     .describe('allowTests', 'only run specified tests. Separated by comma.')
     .boolean('verbose-log')
-    .describe('verbose-log', 'print evmosd output, default false').argv
+    .describe('verbose-log', 'print bfhd output, default false').argv
 
   if (!fs.existsSync(path.join(__dirname, './node_modules'))) {
     panic(
@@ -187,7 +187,7 @@ async function performTests ({ allTests, runConfig }) {
 }
 
 function setupNetwork ({ runConfig, timeout }) {
-  if (runConfig.network !== 'evmos') {
+  if (runConfig.network !== 'bfh') {
     // no need to start ganache. Truffle will start it
     return
   }
@@ -196,14 +196,14 @@ function setupNetwork ({ runConfig, timeout }) {
 
   const spawnPromise = new Promise((resolve, reject) => {
     const serverStartedLog = 'Starting JSON-RPC server'
-    const serverStartedMsg = 'evmosd started'
+    const serverStartedMsg = 'bfhd started'
 
     const evmosdProc = spawn('../e2e/init-node.sh', {
       cwd: __dirname,
       stdio: ['ignore', 'pipe', 'pipe']
     })
 
-    logger.info(`Starting evmosd process... timeout: ${timeout}ms`)
+    logger.info(`Starting bfhd process... timeout: ${timeout}ms`)
     if (runConfig.verboseLog) {
       evmosdProc.stdout.pipe(process.stdout)
     }
@@ -234,7 +234,7 @@ function setupNetwork ({ runConfig, timeout }) {
   })
 
   const timeoutPromise = new Promise((resolve, reject) => {
-    setTimeout(() => reject(new Error('Start evmosd timeout!')), timeout)
+    setTimeout(() => reject(new Error('Start bfhd timeout!')), timeout)
   })
   return Promise.race([spawnPromise, timeoutPromise])
 }

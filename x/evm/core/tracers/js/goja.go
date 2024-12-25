@@ -25,12 +25,12 @@ import (
 
 	"github.com/dop251/goja"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/tracers"
+	jsassets "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/tracers/js/internal/tracers"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/evmos/v20/x/evm/core/tracers"
-	jsassets "github.com/evmos/evmos/v20/x/evm/core/tracers/js/internal/tracers"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 var assetTracers = make(map[string]string)

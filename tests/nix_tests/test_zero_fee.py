@@ -45,7 +45,7 @@ def custom_evmos_rocksdb(tmp_path_factory):
         26810,
         memiavl_config(path, "zero-fee"),
         post_init=create_snapshots_dir,
-        chain_binary="evmosd-rocksdb",
+        chain_binary="bfhd-rocksdb",
     )
 
 

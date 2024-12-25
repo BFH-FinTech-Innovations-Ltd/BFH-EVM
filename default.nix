@@ -12,7 +12,7 @@
 }:
 let
   version = if dbBackend == "rocksdb" then "latest-rocksdb" else "latest";
-  pname = "evmosd";
+  pname = "bfhd";
   tags = [ "ledger" "netgo" ] ++ lib.optionals (dbBackend == "rocksdb") [ "rocksdb" "grocksdb_clean_link" ];
   ldflags = lib.concatStringsSep "\n" ([
     "-X github.com/cosmos/cosmos-sdk/version.Name=evmos"
@@ -50,19 +50,19 @@ buildGoApplication rec {
   modules = ./gomod2nix.toml;
   doCheck = false;
   pwd = src; # needed to support replace
-  subPackages = [ "cmd/evmosd" ];
+  subPackages = [ "cmd/bfhd" ];
   CGO_ENABLED = "1";
 
   postFixup = if dbBackend == "rocksdb" then
     ''
-      # Rename the binary from evmosd to evmosd-rocksdb
-      mv $out/bin/evmosd $out/bin/evmosd-rocksdb
+      # Rename the binary from bfhd to bfhd-rocksdb
+      mv $out/bin/bfhd $out/bin/bfhd-rocksdb
     '' else '''';
 
   meta = with lib; {
     description = "Evmos is a scalable and interoperable blockchain, built on Proof-of-Stake with fast-finality using the Cosmos SDK which runs on top of CometBFT Core consensus engine.";
     homepage = "https://github.com/evmos/evmos";
     license = licenses.asl20;
-    mainProgram = "evmosd";
+    mainProgram = "bfhd";
   };
 }

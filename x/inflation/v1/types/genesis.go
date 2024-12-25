@@ -6,7 +6,7 @@ package types
 import (
 	fmt "fmt"
 
-	epochstypes "github.com/evmos/evmos/v20/x/epochs/types"
+	epochstypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/epochs/types"
 )
 
 // NewGenesisState creates a new GenesisState object

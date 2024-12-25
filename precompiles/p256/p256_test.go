@@ -7,11 +7,11 @@ import (
 	"crypto/elliptic"
 	"crypto/rand"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/p256"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/cometbft/cometbft/crypto"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/precompiles/p256"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 var trueValue = common.LeftPadBytes(common.Big1.Bytes(), 32)

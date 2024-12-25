@@ -11,9 +11,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/keys"
 	"github.com/spf13/cobra"
 
+	clientkeys "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/client/keys"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/hd"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	clientkeys "github.com/evmos/evmos/v20/client/keys"
-	"github.com/evmos/evmos/v20/crypto/hd"
 )
 
 // KeyCommands registers a sub-tree of commands to interact with

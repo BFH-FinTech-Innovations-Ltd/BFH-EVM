@@ -8,9 +8,9 @@ import (
 	cosmosLedger "github.com/cosmos/cosmos-sdk/crypto/ledger"
 	"github.com/cosmos/cosmos-sdk/crypto/types"
 
-	"github.com/evmos/evmos/v20/crypto/ethsecp256k1"
-	"github.com/evmos/evmos/v20/crypto/hd"
-	"github.com/evmos/evmos/v20/wallets/ledger"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/ethsecp256k1"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/hd"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/ledger"
 )
 
 // AppName defines the Ledger app used for signing. Evmos uses the Ethereum app

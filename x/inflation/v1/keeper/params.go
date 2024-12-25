@@ -4,8 +4,8 @@
 package keeper
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/evmos/v20/x/inflation/v1/types"
 )
 
 // GetParams returns the total set of inflation parameters.

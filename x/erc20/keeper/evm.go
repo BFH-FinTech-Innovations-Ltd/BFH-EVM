@@ -7,15 +7,15 @@ import (
 	"math/big"
 
 	errorsmod "cosmossdk.io/errors"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 
-	"github.com/evmos/evmos/v20/contracts"
-	"github.com/evmos/evmos/v20/x/erc20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/contracts"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 )
 
 // DeployERC20Contract creates and deploys an ERC20 contract on the EVM with the

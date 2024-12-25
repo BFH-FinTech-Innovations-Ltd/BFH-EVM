@@ -5,6 +5,11 @@ import (
 	"time"
 
 	"cosmossdk.io/math"
+	evmosapp "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
+	evmosutil "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil"
+	testutiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cometbft/cometbft/crypto/tmhash"
 	cmttypes "github.com/cometbft/cometbft/types"
@@ -15,11 +20,6 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	evmosapp "github.com/evmos/evmos/v20/app"
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
-	evmosutil "github.com/evmos/evmos/v20/testutil"
-	testutiltx "github.com/evmos/evmos/v20/testutil/tx"
-	evmostypes "github.com/evmos/evmos/v20/types"
 )
 
 // SetupWithGenesisValSet initializes a new EvmosApp with a validator set and genesis accounts
@@ -65,7 +65,7 @@ func (s *VestingTestSuite) SetupWithGenesisValSet(valSet *cmttypes.ValidatorSet,
 
 	// set validators and delegations
 	stakingParams := stakingtypes.DefaultParams()
-	// set bond demon to be aevmos
+	// set bond demon to be ubfh
 	stakingParams.BondDenom = evmostypes.BaseDenom
 	stakingGenesis := stakingtypes.NewGenesisState(stakingParams, validators, delegations)
 	genesisState[stakingtypes.ModuleName] = app.AppCodec().MustMarshalJSON(stakingGenesis)

@@ -1,9 +1,9 @@
 package types_test
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/evmos/evmos/v20/x/evm/types"
 )
 
 func (suite *TxDataTestSuite) TestTestNewAccessList() {

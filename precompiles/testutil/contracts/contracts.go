@@ -8,14 +8,14 @@ import (
 	"fmt"
 	"math/big"
 
+	evmosapp "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/ethsecp256k1"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/testutil"
+	evmosutil "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/crypto"
-	evmosapp "github.com/evmos/evmos/v20/app"
-	"github.com/evmos/evmos/v20/crypto/ethsecp256k1"
-	"github.com/evmos/evmos/v20/precompiles/testutil"
-	evmosutil "github.com/evmos/evmos/v20/testutil"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // Call is a helper function to call any arbitrary smart contract.

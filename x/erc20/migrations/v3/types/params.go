@@ -6,8 +6,8 @@ package v3types
 import (
 	"fmt"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/evmos/evmos/v20/x/erc20/types"
 )
 
 var _ types.LegacyParams = &V3Params{}

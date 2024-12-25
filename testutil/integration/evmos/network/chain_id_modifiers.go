@@ -9,10 +9,10 @@ package network
 import (
 	"strings"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
+	erc20types "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/evmos/evmos/v20/utils"
-	erc20types "github.com/evmos/evmos/v20/x/erc20/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // updateErc20GenesisStateForChainID modify the default genesis state for the
@@ -29,40 +29,40 @@ func updateBankGenesisStateForChainID(chainID string, bankGenesisState banktypes
 func generateBankGenesisMetadata(chainID string) banktypes.Metadata {
 	if utils.IsTestnet(chainID) {
 		return banktypes.Metadata{
-			Description: "The native EVM, governance and staking token of the Evmos testnet",
-			Base:        "atevmos",
+			Description: "The native EVM, governance and staking token of the Bfh testnet",
+			Base:        "ufbh",
 			DenomUnits: []*banktypes.DenomUnit{
 				{
-					Denom:    "atevmos",
+					Denom:    "ubfh",
 					Exponent: 0,
 				},
 				{
-					Denom:    "tevmos",
+					Denom:    "ubfh",
 					Exponent: 18,
 				},
 			},
-			Name:    "tEvmos",
-			Symbol:  "tEVMOS",
-			Display: "tevmos",
+			Name:    "ubfh",
+			Symbol:  "ufbh",
+			Display: "ufbh",
 		}
 	}
 
 	return banktypes.Metadata{
-		Description: "The native EVM, governance and staking token of the Evmos mainnet",
-		Base:        "aevmos",
+		Description: "The native EVM, governance and staking token of the Bfh mainnet",
+		Base:        "ubfh",
 		DenomUnits: []*banktypes.DenomUnit{
 			{
-				Denom:    "aevmos",
+				Denom:    "ubfh",
 				Exponent: 0,
 			},
 			{
-				Denom:    "evmos",
+				Denom:    "ubfh",
 				Exponent: 18,
 			},
 		},
-		Name:    "Evmos",
-		Symbol:  "EVMOS",
-		Display: "evmos",
+		Name:    "bfh",
+		Symbol:  "BFH",
+		Display: "bfh",
 	}
 }
 

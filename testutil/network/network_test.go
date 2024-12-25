@@ -10,11 +10,11 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server/config"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/network"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/evmos/evmos/v20/server/config"
-	"github.com/evmos/evmos/v20/testutil/network"
 
-	evmosnetwork "github.com/evmos/evmos/v20/testutil/network"
+	evmosnetwork "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/network"
 )
 
 type IntegrationTestSuite struct {

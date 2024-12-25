@@ -4,13 +4,13 @@
 package ledger_test
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/accounts"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/ledger"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	signingtypes "github.com/cosmos/cosmos-sdk/types/tx/signing"
 	gethaccounts "github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/evmos/v20/wallets/accounts"
-	"github.com/evmos/evmos/v20/wallets/ledger"
 )
 
 func (suite *LedgerTestSuite) TestEvmosLedgerDerivation() {

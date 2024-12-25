@@ -4,8 +4,8 @@
 package keeper
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/vesting/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/evmos/v20/x/vesting/types"
 )
 
 // HasGovClawbackDisabled checks if the given account has governance clawback disabled.

@@ -17,9 +17,9 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
 
-	anteutils "github.com/evmos/evmos/v20/app/ante/utils"
-	evmkeeper "github.com/evmos/evmos/v20/x/evm/keeper"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
+	anteutils "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/utils"
+	evmkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/keeper"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 )
 
 var _ sdk.AnteDecorator = &EthSetupContextDecorator{}

@@ -9,7 +9,7 @@ import (
 )
 
 // Close will be called in graceful shutdown in start cmd
-func (app *Evmos) Close() error {
+func (app *BfhApp) Close() error {
 	errs := []error{app.BaseApp.Close()}
 
 	// flush the versiondb

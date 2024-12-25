@@ -4,19 +4,19 @@ import (
 	"math/big"
 	"testing"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/contracts"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/ethsecp256k1"
+	testfactory "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/factory"
+	testhandler "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/grpc"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
+	testnetwork "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	erc20 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/statedb"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/evmos/v20/contracts"
-	"github.com/evmos/evmos/v20/crypto/ethsecp256k1"
-	testfactory "github.com/evmos/evmos/v20/testutil/integration/evmos/factory"
-	testhandler "github.com/evmos/evmos/v20/testutil/integration/evmos/grpc"
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
-	testnetwork "github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	erc20 "github.com/evmos/evmos/v20/x/erc20/types"
-	"github.com/evmos/evmos/v20/x/evm"
-	"github.com/evmos/evmos/v20/x/evm/statedb"
-	"github.com/evmos/evmos/v20/x/evm/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -235,7 +235,7 @@ func TestExportGenesis(t *testing.T) {
 	require.NoError(t, ts.network.NextBlock(), "failed to advance block")
 
 	genState := evm.ExportGenesis(ts.network.GetContext(), ts.network.App.EvmKeeper)
-	require.Len(t, genState.Accounts, 3, "expected 3 smart contracts in the exported genesis") // NOTE: 2 deployed above + 1 for the aevmos denomination ERC-20 pair
+	require.Len(t, genState.Accounts, 3, "expected 3 smart contracts in the exported genesis") // NOTE: 2 deployed above + 1 for the ubfh denomination ERC-20 pair
 
 	genAddresses := make([]string, 0, len(genState.Accounts))
 	for _, acc := range genState.Accounts {
@@ -243,5 +243,5 @@ func TestExportGenesis(t *testing.T) {
 	}
 	require.Contains(t, genAddresses, contractAddr.Hex(), "expected contract 1 address in exported genesis")
 	require.Contains(t, genAddresses, contractAddr2.Hex(), "expected contract 2 address in exported genesis")
-	require.Contains(t, genAddresses, erc20.WEVMOSContractMainnet, "expected mainnet aevmos contract address in exported genesis")
+	require.Contains(t, genAddresses, erc20.WEVMOSContractMainnet, "expected mainnet ubfh contract address in exported genesis")
 }

@@ -3,4 +3,4 @@
 package types
 
 // DefaultEVMDenom defines the default EVM denomination on Evmos
-var DefaultEVMDenom = "aevmos"
+var DefaultEVMDenom = "ubfh"

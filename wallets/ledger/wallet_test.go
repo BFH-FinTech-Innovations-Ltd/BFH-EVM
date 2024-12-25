@@ -7,11 +7,11 @@ import (
 	"crypto/ecdsa"
 	"errors"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/ethereum/eip712"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/accounts"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/ledger/mocks"
 	gethaccounts "github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/ethereum/eip712"
-	"github.com/evmos/evmos/v20/wallets/accounts"
-	"github.com/evmos/evmos/v20/wallets/ledger/mocks"
 )
 
 func RegisterDerive(mockWallet *mocks.Wallet, addr common.Address, publicKey *ecdsa.PublicKey) {

@@ -21,10 +21,10 @@ import (
 	auxTx "github.com/cosmos/cosmos-sdk/x/auth/tx"
 	bankTypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	"github.com/evmos/evmos/v20/testutil/integration/evmos/network"
-	"github.com/evmos/evmos/v20/wallets/ledger"
-	"github.com/evmos/evmos/v20/wallets/ledger/mocks"
-	"github.com/evmos/evmos/v20/wallets/usbwallet"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/network"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/ledger"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/ledger/mocks"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/wallets/usbwallet"
 )
 
 type LedgerTestSuite struct {

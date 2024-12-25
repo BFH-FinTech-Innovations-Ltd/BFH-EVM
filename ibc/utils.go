@@ -11,11 +11,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 
+	transferkeeper "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/ibc/transfer/keeper"
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	channeltypes "github.com/cosmos/ibc-go/v8/modules/core/04-channel/types"
-	transferkeeper "github.com/evmos/evmos/v20/x/ibc/transfer/keeper"
 
-	"github.com/evmos/evmos/v20/utils"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
 )
 
 // GetTransferSenderRecipient returns the sender and recipient sdk.AccAddresses

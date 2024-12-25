@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/types"
 	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/evmos/evmos/v20/rpc/types"
 
 	"cosmossdk.io/log"
 
@@ -22,7 +22,7 @@ import (
 	"github.com/ethereum/go-ethereum/eth/filters"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 )
 
 // FilterAPI gathers

@@ -4,13 +4,13 @@
 package ante
 
 import (
+	cosmosante "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/cosmos"
+	evmante "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/evm"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/ante"
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 	ibcante "github.com/cosmos/ibc-go/v8/modules/core/ante"
-	cosmosante "github.com/evmos/evmos/v20/app/ante/cosmos"
-	evmante "github.com/evmos/evmos/v20/app/ante/evm"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // newCosmosAnteHandler creates the default ante handler for Cosmos transactions

@@ -13,10 +13,10 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/evmos/evmos/v20/app/ante/evm"
-	testkeyring "github.com/evmos/evmos/v20/testutil/integration/evmos/keyring"
-	"github.com/evmos/evmos/v20/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app/ante/evm"
+	testkeyring "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/integration/evmos/keyring"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 )
 
 type validateMsgParams struct {
@@ -264,7 +264,7 @@ func (suite *EvmAnteTestSuite) TestCheckTxFee() {
 				evmCoinDecimal := evmtypes.GetEVMCoinDecimals()
 				originalAmount = originalAmount.Quo(evmCoinDecimal.ConversionFactor())
 
-				coins := sdktypes.Coins{sdktypes.Coin{Denom: "aevmos", Amount: originalAmount}}
+				coins := sdktypes.Coins{sdktypes.Coin{Denom: "ubfh", Amount: originalAmount}}
 
 				// This struct should hold values in the original representation
 				txFeeInfo := &tx.Fee{

@@ -4,8 +4,8 @@ package keeper
 
 import (
 	storetypes "cosmossdk.io/store/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/evmos/v20/x/evm/types"
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 )

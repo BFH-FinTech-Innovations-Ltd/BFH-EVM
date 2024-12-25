@@ -9,14 +9,14 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/cmd/config"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/cmd/config"
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
-	evmostypes "github.com/evmos/evmos/v20/types"
 )
 
 // EventSetWithdrawAddress defines the event data for the SetWithdrawAddress transaction.

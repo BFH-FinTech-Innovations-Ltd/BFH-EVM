@@ -9,14 +9,14 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/server"
 	ethlog "github.com/ethereum/go-ethereum/log"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
-	"github.com/evmos/evmos/v20/rpc"
 
-	svrconfig "github.com/evmos/evmos/v20/server/config"
-	evmostypes "github.com/evmos/evmos/v20/types"
+	svrconfig "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/server/config"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 )
 
 // StartJSONRPC starts the JSON-RPC server

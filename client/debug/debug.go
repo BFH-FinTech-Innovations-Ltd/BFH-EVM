@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/evmos/evmos/v20/ethereum/eip712"
-	evmos "github.com/evmos/evmos/v20/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/ethereum/eip712"
+	evmos "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
@@ -161,7 +161,7 @@ func LegacyEIP712Cmd() *cobra.Command {
 	return &cobra.Command{
 		Use:     "legacy-eip712 [file]",
 		Short:   "Output types of legacy eip712 typed data according to the given transaction",
-		Example: fmt.Sprintf(`$ %s debug legacy-eip712 tx.json --chain-id evmosd_9000-1`, version.AppName),
+		Example: fmt.Sprintf(`$ %s debug legacy-eip712 tx.json --chain-id bfhd_9000-1`, version.AppName),
 		Args:    cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			clientCtx, err := client.GetClientTxContext(cmd)

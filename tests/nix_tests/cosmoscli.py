@@ -877,7 +877,7 @@ class CosmosCLI:
         channel,  # src channel
         target_version,  # chain version number of target chain
         i=0,  # pylint: disable=unused-argument
-        fees="0aevmos",
+        fees="0ubfh",
     ):
         return json.loads(
             self.raw(
@@ -1080,7 +1080,7 @@ class CosmosCLI:
         )
 
     def build_evm_tx(self, tx, signed):
-        # NOTE: this assumes that the fee is in 18 decimals and denom is aevmos,
+        # NOTE: this assumes that the fee is in 18 decimals and denom is ubfh,
         # to support 6 decimals we need to pass another argument
         # NOTE: this function is only used to validate that the ethereum message can not be inside an
         # authz transaction, so its content is not important
@@ -1131,7 +1131,7 @@ class CosmosCLI:
                 "fee": {
                     "amount": [
                         {
-                            "denom": "aevmos",
+                            "denom": "ubfh",
                             "amount": str(int(tx["gas"]) * int(tx["maxFeePerGas"])),
                         }
                     ],

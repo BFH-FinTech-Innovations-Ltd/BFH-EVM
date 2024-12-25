@@ -5,8 +5,8 @@ package evmv1
 import (
 	"math/big"
 
+	ethutils "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils/eth"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethutils "github.com/evmos/evmos/v20/utils/eth"
 )
 
 // GetChainID returns the chain id field from the derived signature values

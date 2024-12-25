@@ -36,7 +36,7 @@ ACCOUNTS = {
 KEYS = {name: account.key for name, account in ACCOUNTS.items()}
 ADDRS = {name: account.address for name, account in ACCOUNTS.items()}
 EVMOS_ADDRESS_PREFIX = "evmos"
-DEFAULT_DENOM = "aevmos"
+DEFAULT_DENOM = "ubfh"
 WEVMOS_ADDRESS = Web3.toChecksumAddress("0xD4949664cD82660AaE99bEdc034a0deA8A0bd517")
 TEST_CONTRACTS = {
     "TestERC20A": "TestERC20A.sol",
@@ -80,7 +80,7 @@ REGISTER_ERC20_PROP = {
         }
     ],
     "metadata": "ipfs://CID",
-    "deposit": "1aevmos",
+    "deposit": "1ubfh",
     "title": "register erc20",
     "summary": "register erc20",
     "expedited": False,
@@ -99,25 +99,25 @@ EVM_6DEC_CONF = """'evmosics_9000-1': default['evmos_9002-1'] + {
       'minimum-gas-prices': '0ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
     },
     'validators':[{
-      coins: '10001000000000000000000aevmos,1000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
-      staked: '1000000000000000000aevmos',
+      coins: '10001000000000000000000ubfh,1000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
+      staked: '1000000000000000000ubfh',
       mnemonic: '${VALIDATOR1_MNEMONIC}',
     },{
-      coins: '10001000000000000000000aevmos,1000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
-      staked: '1000000000000000000aevmos',
+      coins: '10001000000000000000000ubfh,1000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
+      staked: '1000000000000000000ubfh',
       mnemonic: '${VALIDATOR2_MNEMONIC}',
     }],
     'accounts':[{
       name: 'community',
-      coins: '10000000000000000000000aevmos,1000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
+      coins: '10000000000000000000000ubfh,1000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
       mnemonic: '${COMMUNITY_MNEMONIC}',
     },{
       name: 'signer1',
-      coins: '20000000000000000000000aevmos,2000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
+      coins: '20000000000000000000000ubfh,2000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
       mnemonic: '${SIGNER1_MNEMONIC}',
     },{
       name: 'signer2',
-      coins: '30000000000000000000000aevmos,3000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
+      coins: '30000000000000000000000ubfh,3000000000000000000ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
       mnemonic: '${SIGNER2_MNEMONIC}',
     }],
     'genesis'+: {
@@ -283,9 +283,9 @@ def approve_proposal(n, proposal_id, **kwargs):
     """
     cli = n.cosmos_cli()
 
-    # make the deposit (1 aevmos)
-    # 'aevmos' is always the gov denom for the current tests
-    rsp = cli.gov_deposit("signer2", proposal_id, 1, denom="aevmos", **kwargs)
+    # make the deposit (1 ubfh)
+    # 'ubfh' is always the gov denom for the current tests
+    rsp = cli.gov_deposit("signer2", proposal_id, 1, denom="ubfh", **kwargs)
     assert rsp["code"] == 0, rsp["raw_log"]
     wait_for_new_blocks(cli, 1)
 
@@ -531,7 +531,7 @@ local default = import '{tests_dir}/configs/{file_name}.jsonnet';
 default {{
   dotenv: '{root_dir}/scripts/.env',
   'evmos_9002-1'+: {{
-    cmd: 'evmosd-rocksdb',
+    cmd: 'bfhd-rocksdb',
     'app-config'+: {{
       'app-db-backend': 'rocksdb',
       memiavl: {{

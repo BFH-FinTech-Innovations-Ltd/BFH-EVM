@@ -4,8 +4,8 @@
 package testdata
 
 import (
-	contractutils "github.com/evmos/evmos/v20/contracts/utils"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
+	contractutils "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/contracts/utils"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 )
 
 // LoadMaliciousDelayedContract loads the ERC20MaliciousDelayed contract.

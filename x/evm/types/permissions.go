@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"slices"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 // PermissionPolicy is the interface that defines the permission policy for contract creation and calls.

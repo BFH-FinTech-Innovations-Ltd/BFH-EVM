@@ -8,16 +8,16 @@ import (
 	"math/big"
 
 	sdkmath "cosmossdk.io/math"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
+	auth "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/erc20"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
+	inflationtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/app"
-	auth "github.com/evmos/evmos/v20/precompiles/authorization"
-	"github.com/evmos/evmos/v20/precompiles/erc20"
-	"github.com/evmos/evmos/v20/testutil"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
-	inflationtypes "github.com/evmos/evmos/v20/x/inflation/v1/types"
 )
 
 // Define useful variables for tests here.
@@ -27,7 +27,7 @@ var (
 	// validTraceDenom is a denomination trace with a valid IBC voucher name
 	validTraceDenom = types.DenomTrace{Path: "channel-0", BaseDenom: "uosmo"}
 	// validAttoTraceDenom is a denomination trace with a valid IBC voucher name and 18 decimals
-	validAttoTraceDenom = types.DenomTrace{Path: "channel-0", BaseDenom: "aevmos"}
+	validAttoTraceDenom = types.DenomTrace{Path: "channel-0", BaseDenom: "ubfh"}
 	// validTraceDenomNoMicroAtto is a denomination trace with a valid IBC voucher name but no micro or atto prefix
 	validTraceDenomNoMicroAtto = types.DenomTrace{Path: "channel-0", BaseDenom: "mevmos"}
 

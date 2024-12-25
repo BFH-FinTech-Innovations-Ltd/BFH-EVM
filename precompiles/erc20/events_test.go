@@ -3,12 +3,12 @@ package erc20_test
 import (
 	"math/big"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/authorization"
+	cmn "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/common"
+	erc20precompile "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/precompiles/erc20"
+	utiltx "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/testutil/tx"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/evmos/v20/precompiles/authorization"
-	cmn "github.com/evmos/evmos/v20/precompiles/common"
-	erc20precompile "github.com/evmos/evmos/v20/precompiles/erc20"
-	utiltx "github.com/evmos/evmos/v20/testutil/tx"
 )
 
 //nolint:dupl // this is not a duplicate of the approval events test

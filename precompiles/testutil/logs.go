@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"slices"
 
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 // CheckLogs checks the logs for the given events and whether the transaction was successful or not.

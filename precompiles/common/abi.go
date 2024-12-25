@@ -9,12 +9,12 @@ import (
 	"math/big"
 	"reflect"
 
+	contractutils "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/contracts/utils"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
-	contractutils "github.com/evmos/evmos/v20/contracts/utils"
 )
 
 // MakeTopic converts a filter query argument into a filter topic.

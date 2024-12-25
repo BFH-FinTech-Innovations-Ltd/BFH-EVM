@@ -6,9 +6,9 @@ package keeper
 import (
 	"slices"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/erc20/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/x/erc20/types"
 )
 
 var isTrue = []byte("0x01")

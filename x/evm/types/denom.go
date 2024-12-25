@@ -10,8 +10,8 @@ import (
 	"fmt"
 
 	"cosmossdk.io/math"
-	"github.com/evmos/evmos/v20/types"
-	"github.com/evmos/evmos/v20/utils"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/utils"
 )
 
 // NOTE: Remember to add the ConversionFactor associated with constants.

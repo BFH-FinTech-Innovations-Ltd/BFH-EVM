@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"time"
 
-	evmostypes "github.com/evmos/evmos/v20/types"
+	evmostypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/types"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 

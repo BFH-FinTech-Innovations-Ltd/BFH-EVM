@@ -23,9 +23,9 @@ import (
 	abci "github.com/cometbft/cometbft/abci/types"
 	tmrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/rpc/types"
+	evmtypes "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/types"
 	"github.com/cometbft/cometbft/proto/tendermint/crypto"
-	"github.com/evmos/evmos/v20/rpc/types"
-	evmtypes "github.com/evmos/evmos/v20/x/evm/types"
 )
 
 type txGasAndReward struct {

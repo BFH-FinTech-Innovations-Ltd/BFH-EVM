@@ -4,7 +4,7 @@
 package eips
 
 import (
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 )
 
 var (

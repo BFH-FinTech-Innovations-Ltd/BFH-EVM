@@ -19,11 +19,11 @@ import (
 	"testing"
 
 	storetypes "cosmossdk.io/store/types"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/encoding"
+	v4 "github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/migrations/v4"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/feemarket/types"
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/evmos/v20/encoding"
-	v4 "github.com/evmos/evmos/v20/x/feemarket/migrations/v4"
-	"github.com/evmos/evmos/v20/x/feemarket/types"
 	"github.com/stretchr/testify/require"
 )
 

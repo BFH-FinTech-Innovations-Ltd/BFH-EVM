@@ -7,13 +7,13 @@ import (
 
 	"github.com/spf13/cobra"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/ethsecp256k1"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/input"
 	"github.com/cosmos/cosmos-sdk/crypto"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/crypto/ethsecp256k1"
 
-	"github.com/evmos/evmos/v20/crypto/hd"
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/crypto/hd"
 )
 
 // UnsafeImportKeyCommand imports private keys from a keyfile.

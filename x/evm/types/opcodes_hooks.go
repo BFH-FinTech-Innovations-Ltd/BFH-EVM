@@ -4,8 +4,8 @@
 package types
 
 import (
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/x/evm/core/vm"
 )
 
 // OpCodeHooks extends the geth OpCodeHooks interface to add custom hooks for EVM operations.

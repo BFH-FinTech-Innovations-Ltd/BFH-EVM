@@ -3,12 +3,12 @@ package vesting_test
 import (
 	"testing"
 
+	"github.com/BFH-FinTech-Innovations-Ltd/BFH-EVM/app"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/evmos/evmos/v20/app"
 	"github.com/stretchr/testify/suite"
 )
 

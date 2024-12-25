@@ -1,8 +1,8 @@
 { pkgs ? import ../../../nix { } }:
-let evmosd = (pkgs.callPackage ../../../. { });
+let bfhd = (pkgs.callPackage ../../../. { });
 in
-evmosd.overrideAttrs (oldAttrs: {
+bfhd.overrideAttrs (oldAttrs: {
   patches = oldAttrs.patches or [ ] ++ [
-    ./broken-evmosd.patch
+    ./broken-bfhd.patch
   ];
 })
